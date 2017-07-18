@@ -1,0 +1,24 @@
+<nav class="gtco-nav" role="navigation">
+	<div class="gtco-container">
+		<div class="row">
+			<div class="col-xs-2">
+				<div id="gtco-logo"><%= link_to '+Seguro', root_path %></div>
+			</div>
+			<div class="col-xs-10 text-right menu-1">
+				<ul>
+					<li class="active"><%= link_to 'Inicio', root_path %></li>
+          <li class="has-dropdown">
+						<a href="#">Seguros</a>
+						<ul class="dropdown">
+							<li><%= link_to 'Automóviles', car_path %></li>
+							<li><%= link_to 'Incendios', fire_path %></li>
+							<li><%= link_to 'Vida', life_path %></li>
+						</ul>
+					</li>
+					<li><%= link_to 'Acerca de nosotros', about_path %></li>
+					<li><%= link_to 'Contacto', contact_path %></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
