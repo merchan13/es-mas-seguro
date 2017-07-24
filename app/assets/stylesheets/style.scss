@@ -1394,3 +1394,10 @@ form label {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+abbr,
+abbr[title] {
+  border-bottom: transparent;
+  text-decoration: none;
+  color: red;
+}

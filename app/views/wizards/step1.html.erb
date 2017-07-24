@@ -2,25 +2,73 @@
 	<div class="gtco-container">
 		<div class="row">
 			<div class="col-md-6 animate-box">
-				<h3>Get In Touch</h3>
+				<h3>Seguro de Automóvil</h3>
         <ol class="breadcrumb">
-          <li class='active'>Step 1</li>
-          <li>Step 2</li>
-          <li>Step 3</li>
+          <li class='active'>Datos básicos</li>
+          <li>Datos del Automóvil</li>
+          <li>Documentos</li>
         </ol>
 
         <%= simple_form_for @cir_wizard, as: :cir_wizard, url: validate_step_wizard_path do |f| %>
           <%= f.error_notification %>
 
           <%= hidden_field_tag :current_step, 'step1' %>
-          <%= f.input :full_name %>
-          <%= f.input :address %>
-          <%= f.input :phone_number %>
-          <%= f.input :email %>
-          <%= f.input :id_card %>
-          <%= f.input :country %>
 
-          <%= f.submit 'Continue' %>
+          <div class="row form-group">
+						<div class="col-md-10">
+              <%= f.input :full_name,
+                          placeholder: 'Nombre completo',
+                          input_html: { class: 'form-control' },
+                          label: 'Nombre completo'
+              %>
+						</div>
+					</div>
+          <div class="row form-group">
+						<div class="col-md-10">
+              <%= f.input :address,
+                          placeholder: 'Dirección',
+                          input_html: { class: 'form-control' },
+                          label: 'Dirección de vivienda'
+              %>
+            </div>
+          </div>
+          <div class="row form-group">
+						<div class="col-md-10">
+              <%= f.input :phone_number,
+                          placeholder: 'Teléfono',
+                          input_html: { class: 'form-control' },
+                          label: 'Número telefónico'
+              %>
+            </div>
+          </div>
+          <div class="row form-group">
+						<div class="col-md-10">
+              <%= f.input :email,
+                          placeholder: 'Email',
+                          input_html: { class: 'form-control' },
+                          label: 'Email'
+              %>
+            </div>
+          </div>
+          <div class="row form-group">
+						<div class="col-md-10">
+              <%= f.input :id_card,
+                          placeholder: 'Cédula',
+                          input_html: { class: 'form-control' },
+                          label: 'Cédula'
+              %>
+            </div>
+          </div>
+          <div class="row form-group">
+						<div class="col-md-10">
+              <%= f.input :country,
+                          placeholder: 'País de nacimiento',
+                          input_html: { class: 'form-control' },
+                          label: 'País de nacimiento'
+              %>
+            </div>
+          </div>
+          <%= f.submit 'Continue', class: "btn btn-primary" %>
         <% end %>
 			</div>
 		</div>
