@@ -4,12 +4,33 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
+
     <h1>
-      Nueva solicitud de seguro de <%= @request.insurance_type %>
+      Nueva solicitud de seguro de Automóvil
     </h1>
 
-    <h3>Nombre del cliente: <%= @request.name %></h3>
-    
-    <p><%= @request.message %></p>
+    <strong><h3>Datos del cliente</h3></strong>
+    <p><strong>Nombre: </strong><%= @cir_wizard.full_name%></p>
+    <p><strong>Cédula: </strong><%= @cir_wizard.id_card%></p>
+    <p><strong>Dirección: </strong><%= @cir_wizard.address%></p>
+    <p><strong>Teléfono: </strong><%= @cir_wizard.phone_number%></p>
+    <p><strong>Email: </strong><%= @cir_wizard.email%></p>
+    <p><strong>Pais: </strong><%= @cir_wizard.country%></p>
+
+    <strong><h3>Datos del automóvil</h3></strong>
+    <p><strong>Marca: </strong><%= @cir_wizard.car_brand%></p>
+    <p><strong>Modelo: </strong><%= @cir_wizard.car_model%></p>
+    <p><strong>Año: </strong><%= @cir_wizard.car_year%></p>
+    <p><strong>Valor: </strong><%= @cir_wizard.car_value%></p>
+
+    <strong><h3>Documentos</h3></strong>
+<!--
+    <p><strong>Cédula: </strong><a href=""><%#= @cir_wizard.id_card_img.url%></a></p>
+    <p><strong>Licencia: </strong><a href=""><%#= @cir_wizard.driver_license.url%></a></p>
+    <p><strong>Registro vehicular: </strong><a href=""><%#= @cir_wizard.vehicle_registration.url%><a></p>
+-->
+    <p><strong>Cédula: </strong><a href="https://cdn.shopify.com/s/files/1/0724/7353/products/PANAMA1_1024x1024.jpg?v=1433105268"></a></p>
+    <p><strong>Licencia: </strong><a href="https://images-na.ssl-images-amazon.com/images/I/519ePr2cgkL.jpg"></a></p>
+    <p><strong>Registro vehicular: </strong><a href="http://wisconsindot.gov/Documents/dmv/vehicles/title-plates/tvr-2010.jpg"><a></p>
   </body>
 </html>

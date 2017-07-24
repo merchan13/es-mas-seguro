@@ -17,6 +17,8 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'sprockets'
 gem 'sendgrid-ruby'
+gem 'simple_form'
+gem 'localized_country_select'
 
 group :development, :test do
   gem 'byebug', platform: :mri

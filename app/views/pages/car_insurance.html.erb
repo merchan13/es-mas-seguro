@@ -18,7 +18,7 @@
 		<div class="row">
 			<div class="col-md-6 animate-box">
 				<h3>Solicitud de seguro</h3>
-        
+
         <form accept-charset="UTF-8" action="/insurance_requests" class="new_person" id="new_person" method="post">
           <input type="hidden" name="insurance_request[insurance_type]" class="form-control" value="Automovil">
 
@@ -41,6 +41,10 @@
 					</div>
 
 				</form>
+
+        <h2>User wizard</h2>
+
+        <%= link_to "Create a CIR", step1_wizard_path, class: 'btn btn-success' %>
 			</div>
 		</div>
 

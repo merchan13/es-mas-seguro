@@ -1,0 +1,25 @@
+<div class="gtco-section">
+	<div class="gtco-container">
+		<div class="row">
+			<div class="col-md-6 animate-box">
+				<h3>Get In Touch</h3>
+        <ol class="breadcrumb">
+          <li><%= link_to "Step 1", step1_wizard_path %></li>
+          <li><%= link_to "Step 2", step2_wizard_path %></li>
+          <li class="active">Step 3</li>
+        </ol>
+
+        <%= simple_form_for @cir_wizard, as: :cir_wizard, url: validate_step_wizard_path do |f| %>
+          <%= f.error_notification %>
+
+          <%= hidden_field_tag :current_step, 'step3' %>
+          <%= f.input :id_card_img %>
+          <%= f.input :driver_license %>
+          <%= f.input :vehicle_registration %>
+
+          <%= f.submit 'Finish' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
