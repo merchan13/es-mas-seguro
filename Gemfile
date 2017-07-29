@@ -19,6 +19,7 @@ gem 'sprockets'
 gem 'sendgrid-ruby'
 gem 'simple_form'
 gem 'localized_country_select'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'byebug', platform: :mri

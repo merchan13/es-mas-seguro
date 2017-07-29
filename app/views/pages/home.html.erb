@@ -1,4 +1,4 @@
-<header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url(<%= asset_path '2.jpg' %>">
+<header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url(<%= asset_path 'header.png' %>">
 	<div class="overlay"></div>
 	<div class="gtco-container">
 		<div class="row">
@@ -9,7 +9,7 @@
 						<h2>Hecho con <i class="icon-heart"></i> por <a href="http://labequis.com/" target="_blank">Javi</a></h2>
 						<p>
 							<a href="#" class="btn btn-primary btn-lg">Ver seguros</a>
-							<a href="#" class="btn btn-white btn-outline btn-lg">Más información</a></p>
+							<a href="#" class="btn btn-white btn-outline btn-lg">Necesito ayuda</a></p>
 					</div>
 				</div>
 			</div>
@@ -17,6 +17,51 @@
 	</div>
 </header>
 
+<!-- 1-2-3 STEPS -->
+<div id="gtco-steps">
+  <div class="container">
+    <div class="row animate-box">
+      <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+        <h2>¿Cómo puedo contratar mi seguro?</h2>
+        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+      </div>
+    </div>
+
+    <div class="row bs-wizard animate-box" style="border-bottom:0;">
+
+      <div class="col-xs-3 bs-wizard-step complete">
+        <div class="text-center bs-wizard-stepnum"><h4>Paso 1</h4></div>
+        <div class="progress"><div class="progress-bar"></div></div>
+        <a href="#" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center"><p>Create A Free Course</p></div>
+      </div>
+
+      <div class="col-xs-3 bs-wizard-step active"><!-- complete -->
+        <div class="text-center bs-wizard-stepnum"><h4>Paso 2</h4></div>
+        <div class="progress"><div class="progress-bar"></div></div>
+        <a href="#" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center"><p>Upload Content</p></div>
+      </div>
+
+      <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
+        <div class="text-center bs-wizard-stepnum"><h4>Paso 3</h4></div>
+        <div class="progress"><div class="progress-bar"></div></div>
+        <a href="#" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center"><p>Make Your Course Beautiful</p></div>
+      </div>
+
+      <div class="col-xs-3 bs-wizard-step disabled"><!-- active -->
+        <div class="text-center bs-wizard-stepnum"><h4>Paso 4</h4></div>
+        <div class="progress"><div class="progress-bar"></div></div>
+        <a href="#" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center"><p>Start Making Money</p></div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- 1-2-3 STEPS -->
+
+<!-- QUE -->
 <div id="gtco-services">
 	<div class="gtco-container">
 
@@ -35,160 +80,180 @@
 					<li><a href="#" data-tab="2"><span class="icon visible-xs"><i class="icon-bar-graph"></i></span><span class="hidden-xs">Incendios</span></a></li>
 					<li><a href="#" data-tab="3"><span class="icon visible-xs"><i class="icon-bag"></i></span><span class="hidden-xs">Vida</span></a></li>
 				</ul>
-
 				<!-- Tabs -->
 				<div class="gtco-tab-content-wrap">
-
+          <!-- AUTOMOVILES -->
 					<div class="gtco-tab-content tab-content active" data-tab-content="1">
-						<div class="col-md-6">
-							<div class="gtco-video gtco-bg" style="background-image: url(<%= asset_path 'img_1.jpg'%>); ">
-								<a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video"></i></a>
-								<div class="overlay"></div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<h2>Automóviles</h2>
-							<p>Paragraph placeat quis fugiat provident veritatis quia iure a debitis adipisci dignissimos consectetur magni quas eius nobis reprehenderit soluta eligendi quo reiciendis fugit? Veritatis tenetur odio delectus quibusdam officiis est.</p>
-
-							<p>Ullam dolorum iure dolore dicta fuga ipsa velit veritatis molestias totam fugiat soluta accusantium omnis quod similique placeat at. Dolorum ducimus libero fuga molestiae asperiores obcaecati corporis sint illo facilis.</p>
-
-							<div class="row">
-								<div class="col-md-6 col-md-offset-4">
-                  <%= link_to 'Obtener Seguro', car_path, class: "btn btn-primary btn-outline" %>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-					<div class="gtco-tab-content tab-content" data-tab-content="2">
-						<div class="col-md-6 col-md-push-6">
-							<div class="gtco-video gtco-bg" style="background-image: url(<%= asset_path 'img_1.jpg' %>); ">
-								<a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video"></i></a>
-								<div class="overlay"></div>
-							</div>
-						</div>
-						<div class="col-md-6 col-md-pull-6">
-							<h2>Incendios</h2>
-							<p>Paragraph placeat quis fugiat provident veritatis quia iure a debitis adipisci dignissimos consectetur magni quas eius nobis reprehenderit soluta eligendi quo reiciendis fugit? Veritatis tenetur odio delectus quibusdam officiis est.</p>
-
-							<p>Ullam dolorum iure dolore dicta fuga ipsa velit veritatis molestias totam fugiat soluta accusantium omnis quod similique placeat at. Dolorum ducimus libero fuga molestiae asperiores obcaecati corporis sint illo facilis.</p>
-
+            <div class="col-md-6">
+              <div class="icon icon-xlg">
+                <i class="fa fa-car" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h2>Seguros de Automóviles</h2>
+              <p>Paragraph placeat quis fugiat provident veritatis quia iure a debitis adipisci dignissimos consectetur magni quas eius nobis reprehenderit soluta eligendi quo reiciendis fugit? Veritatis tenetur odio delectus quibusdam officiis est.</p>
               <div class="row">
 								<div class="col-md-6 col-md-offset-4">
-									<%= link_to 'Obtener Seguro', fire_path, class: "btn btn-primary btn-outline" %>
+                  <%= link_to 'Obtener Seguro', car_path, class: "btn btn-primary" %>
 								</div>
 							</div>
+            </div>
+					</div><!-- AUTOMOVILES -->
 
-						</div>
-					</div>
+          <!-- INCENDIOS -->
+          <div class="gtco-tab-content tab-content" data-tab-content="2">
+            <div class="col-md-6">
+              <div class="icon icon-xlg">
+                <i class="fa fa-fire-extinguisher" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h2>Seguros por Incendios</h2>
+              <p>Paragraph placeat quis fugiat provident veritatis quia iure a debitis adipisci dignissimos consectetur magni quas eius nobis reprehenderit soluta eligendi quo reiciendis fugit? Veritatis tenetur odio delectus quibusdam officiis est.</p>
+              <div class="row">
+								<div class="col-md-6 col-md-offset-4">
+                  <%= link_to 'Obtener Seguro', fire_path, class: "btn btn-primary" %>
+								</div>
+							</div>
+            </div>
+          </div><!-- INCENDIOS -->
 
+          <!-- VIDA -->
           <div class="gtco-tab-content tab-content" data-tab-content="3">
-						<div class="col-md-6">
-							<div class="gtco-video gtco-bg" style="background-image: url(<%= asset_path 'img_1.jpg'%>); ">
-								<a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video"></i></a>
-								<div class="overlay"></div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<h2>Vida</h2>
-							<p>Paragraph placeat quis fugiat provident veritatis quia iure a debitis adipisci dignissimos consectetur magni quas eius nobis reprehenderit soluta eligendi quo reiciendis fugit? Veritatis tenetur odio delectus quibusdam officiis est.</p>
-
-							<p>Ullam dolorum iure dolore dicta fuga ipsa velit veritatis molestias totam fugiat soluta accusantium omnis quod similique placeat at. Dolorum ducimus libero fuga molestiae asperiores obcaecati corporis sint illo facilis.</p>
-
+            <div class="col-md-6">
+              <div class="icon icon-xlg">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h2>Seguros de Vida</h2>
+              <p>Paragraph placeat quis fugiat provident veritatis quia iure a debitis adipisci dignissimos consectetur magni quas eius nobis reprehenderit soluta eligendi quo reiciendis fugit? Veritatis tenetur odio delectus quibusdam officiis est.</p>
               <div class="row">
 								<div class="col-md-6 col-md-offset-4">
-									<%= link_to 'Obtener Seguro', life_path, class: "btn btn-primary btn-outline" %>
+                  <%= link_to 'Obtener Seguro', life_path, class: "btn btn-primary" %>
 								</div>
 							</div>
-
-						</div>
-					</div>
-
-				</div>
-
+            </div>
+          </div><!-- VIDA -->
+				</div><!-- Tabs -->
 			</div>
 		</div>
 	</div>
-</div>
+</div><!-- QUE -->
 
-<div id="gtco-testimonial">
-	<div class="gtco-container">
-		<div class="row animate-box">
-			<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-				<h2>Testimonial</h2>
-			</div>
-		</div>
-		<div class="row animate-box">
+<!-- SEPARADOR -->
+<div class="gtco-cover gtco-cover-sm" style="background-image:url(<%= asset_path 'backgrounds/bg.jpg' %>">
+  <div class="overlay"></div>
+  <div class="gtco-container">
+    <div class="row">
+      <div class="col-md-12 col-md-offset-0 text-center">
+        <div class="display-t">
+          <div class="display-tc animate-box" data-animate-effect="fadeIn">
+            <h1>+Seguro +Rápido</h1>
+            <h2>Quos quia provident consequuntur culpa facere ratione</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- SEPARADOR -->
 
+<!-- POR QUE -->
+<div class="gtco-section">
+  <div class="gtco-container">
+    <div class="row animate-box">
+      <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+        <h2>¿Por qué +Seguro?</h2>
+        <p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
+      </div>
+    </div>
+    <div class="row animate-box">
+      <div class="col-md-6">
+        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+          <span class="icon">
+            <i class="icon-check"></i>
+          </span>
+          <div class="feature-copy">
+            <h3>Retina Ready</h3>
+            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+          </div>
+        </div>
 
-			<div class="owl-carousel owl-carousel-fullwidth ">
-				<div class="item">
-					<div class="testimony-slide active text-center">
-						<figure>
-              <%= image_tag("person_1.jpg") %>
-						</figure>
-						<span>Jean Doe, via <a href="#" class="twitter">Twitter</a></span>
-						<blockquote>
-							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-						</blockquote>
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-slide active text-center">
-						<figure>
-              <%= image_tag("person_2.jpg") %>
-						</figure>
-						<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-						<blockquote>
-							<p>&ldquo;Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-						</blockquote>
-					</div>
-				</div>
-				<div class="item">
-					<div class="testimony-slide active text-center">
-						<figure>
-              <%= image_tag("person_3.jpg") %>
-						</figure>
-						<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-						<blockquote>
-							<p>&ldquo;Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-						</blockquote>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+          <span class="icon">
+            <i class="icon-check"></i>
+          </span>
+          <div class="feature-copy">
+            <h3>Fully Responsive</h3>
+            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+          </div>
+        </div>
 
-<div id="gtco-subscribe">
-	<div class="gtco-container">
-		<div class="row animate-box">
-			<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-				<h2>Subscribe</h2>
-				<p>Be the first to know about the new templates.</p>
-			</div>
-		</div>
-		<div class="row animate-box">
-			<div class="col-md-12">
-				<form class="form-inline">
-					<div class="col-md-4 col-sm-4">
-						<div class="form-group">
-							<label for="email" class="sr-only">Email</label>
-							<input type="email" class="form-control" id="email" placeholder="Your email">
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4">
-						<div class="form-group">
-							<label for="name" class="sr-only">Name</label>
-							<input type="text" class="form-control" id="name" placeholder="Your name">
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4">
-						<button type="submit" class="btn btn-default btn-block">Subscribe</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
+        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+          <span class="icon">
+            <i class="icon-check"></i>
+          </span>
+          <div class="feature-copy">
+            <h3>Ready To Use</h3>
+            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+
+        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+          <span class="icon">
+            <i class="icon-check"></i>
+          </span>
+          <div class="feature-copy">
+            <h3>Retina Ready</h3>
+            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+          </div>
+        </div>
+
+        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+          <span class="icon">
+            <i class="icon-check"></i>
+          </span>
+          <div class="feature-copy">
+            <h3>Fully Responsive</h3>
+            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+          </div>
+        </div>
+
+        <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+          <span class="icon">
+            <i class="icon-check"></i>
+          </span>
+          <div class="feature-copy">
+            <h3>Ready To Use</h3>
+            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- POR QUE -->
+
+<!-- NUESTROS SEGUROS -->
+<div class="gtco-client">
+  <div class="gtco-container">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1 text-center client col-sm-6 col-xs-6 col-xs-offset-0 col-sm-offset-0">
+        <%= image_tag("clients/client_1.png", class: "img-responsive") %>
+      </div>
+      <div class="col-md-2 text-center client col-sm-6 col-xs-6 col-xs-offset-0 col-sm-offset-0">
+        <%= image_tag("clients/client_2.png", class: "img-responsive") %>
+      </div>
+      <div class="col-md-2 text-center client col-sm-6 col-xs-6 col-xs-offset-0 col-sm-offset-0">
+        <%= image_tag("clients/client_3.png", class: "img-responsive") %>
+      </div>
+      <div class="col-md-2 text-center client col-sm-6 col-xs-6 col-xs-offset-0 col-sm-offset-0">
+        <%= image_tag("clients/client_4.png", class: "img-responsive") %>
+      </div>
+      <div class="col-md-2 text-center client col-sm-6 col-xs-6 col-xs-offset-0 col-sm-offset-0">
+        <%= image_tag("clients/client_5.png", class: "img-responsive") %>
+      </div>
+    </div>
+  </div>
+</div><!-- NUESTROS SEGUROS -->

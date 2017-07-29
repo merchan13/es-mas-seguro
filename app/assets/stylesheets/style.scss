@@ -1,3 +1,6 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 @font-face {
   font-family: 'icomoon';
   src: asset_url("icomoon/icomoon.eot?srf3rx");
@@ -308,7 +311,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .gtco-cover {
-  height: 900px;
+  height: 700px;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -344,7 +347,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .gtco-cover .display-t,
 .gtco-cover .display-tc {
-  height: 900px;
+  height: 750px;
   display: table;
   width: 100%;
 }
@@ -355,23 +358,23 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 .gtco-cover.gtco-cover-sm {
-  height: 600px;
+  height: 300px;
 }
 @media screen and (max-width: 768px) {
   .gtco-cover.gtco-cover-sm {
-    height: 400px;
+    height: 200px;
   }
 }
 .gtco-cover.gtco-cover-sm .display-t,
 .gtco-cover.gtco-cover-sm .display-tc {
-  height: 600px;
+  height: 300px;
   display: table;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
   .gtco-cover.gtco-cover-sm .display-t,
   .gtco-cover.gtco-cover-sm .display-tc {
-    height: 400px;
+    height: 200px;
   }
 }
 
@@ -581,8 +584,9 @@ form label {
 #gtco-services,
 #gtco-subscribe,
 #gtco-footer,
+#gtco-steps,
 .gtco-section {
-  padding: 7em 0;
+  padding: 5em 0;
   clear: both;
 }
 @media screen and (max-width: 768px) {
@@ -690,7 +694,7 @@ form label {
 }
 
 .gtco-heading {
-  margin-bottom: 5em;
+  margin-bottom: 3em;
 }
 .gtco-heading.gtco-heading-sm {
   margin-bottom: 2em;
@@ -763,7 +767,7 @@ form label {
 
 .gtco-tabs .gtco-tab-nav {
   clear: both;
-  margin: 0 0 3em 0;
+  margin: 0;
   padding: 3px;
   float: left;
   width: 100%;
@@ -823,8 +827,8 @@ form label {
   visibility: visible;
 }
 .gtco-tabs .icon-xlg {
-  font-size: 400px;
-  margin-bottom: 30px;
+  font-size: 300px;
+  margin-bottom: 0px;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
@@ -1400,4 +1404,119 @@ abbr[title] {
   border-bottom: transparent;
   text-decoration: none;
   color: red;
+}
+
+.bs-wizard {
+  margin-top: 40px;
+}
+
+/*Form Wizard*/
+.bs-wizard {
+  border-bottom: solid 1px #e0e0e0;
+  padding: 0 0 10px 0;
+}
+
+.bs-wizard > .bs-wizard-step {
+  padding: 0;
+  position: relative;
+}
+
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.bs-wizard > .bs-wizard-step .bs-wizard-info {
+  color: #999;
+  font-size: 14px;
+  padding: 20px;
+}
+
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background: #fbac8a;
+  top: 45px;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 50%;
+}
+
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
+  content: ' ';
+  width: 14px;
+  height: 14px;
+  background: #f86a2d;
+  border-radius: 50px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.bs-wizard > .bs-wizard-step > .progress {
+  position: relative;
+  border-radius: 0px;
+  height: 8px;
+  box-shadow: none;
+  margin: 22px 0;
+}
+
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+  width: 0px;
+  box-shadow: none;
+  background: #fbac8a;
+}
+
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+  width: 100%;
+}
+
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
+  width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+  width: 0%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
+  width: 100%;
+}
+
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+  background-color: #f5f5f5;
+}
+
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
+  opacity: 0;
+}
+
+.bs-wizard > .bs-wizard-step:first-child > .progress {
+  left: 50%;
+  width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child > .progress {
+  width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
+  pointer-events: none;
+}
+
+.gtco-client {
+  float: left;
+  width: 100%;
+  padding: 3em 0;
+  background: #f6f6f6;
+}
+.gtco-client .client img {
+  margin-top: 10px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
 }
