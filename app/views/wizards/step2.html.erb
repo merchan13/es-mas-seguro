@@ -1,3 +1,5 @@
+<%= render 'header' %>
+
 <div class="gtco-section">
 	<div class="gtco-container">
 		<div class="row">
@@ -13,12 +15,53 @@
           <%= f.error_notification %>
 
           <%= hidden_field_tag :current_step, 'step2' %>
-          <%= f.input :car_brand %>
-          <%= f.input :car_model %>
-          <%= f.input :car_year %>
-          <%= f.input :car_value %>
 
-          <%= f.submit 'Continue' %>
+          <!-- Marca -->
+          <div class="row form-group">
+						<div class="col-md-10">
+              <%= f.input :car_brand,
+                          placeholder: 'Marca del automóvil',
+                          input_html: { class: 'form-control' },
+                          label: 'Marca'
+              %>
+						</div>
+					</div><!-- Marca -->
+
+          <!-- Modelo -->
+          <div class="row form-group">
+						<div class="col-md-10">
+              <%= f.input :car_model,
+                          placeholder: 'Modelo del automóvil',
+                          input_html: { class: 'form-control' },
+                          label: 'Modelo'
+              %>
+						</div>
+					</div><!-- Modelo -->
+
+          <!-- Año -->
+          <div class="row form-group">
+						<div class="col-md-10">
+              <%= f.input :car_year,
+                          placeholder: 'Año de construcción',
+                          input_html: { class: 'form-control' },
+                          label: 'Año'
+              %>
+						</div>
+					</div><!-- Año -->
+
+          <!-- Valor -->
+          <div class="row form-group">
+						<div class="col-md-10">
+              <%= f.input :car_value,
+                          placeholder: 'Valor de automóvil en dólares',
+                          input_html: { class: 'form-control' },
+                          label: 'Valor ($)'
+              %>
+						</div>
+					</div><!-- Valor -->
+
+          <%= f.submit 'Continue', class: "btn btn-primary" %>
+
         <% end %>
       </div>
     </div>

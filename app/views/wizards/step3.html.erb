@@ -1,3 +1,5 @@
+<%= render 'header' %>
+
 <div class="gtco-section">
 	<div class="gtco-container">
 		<div class="row">
@@ -13,11 +15,39 @@
           <%= f.error_notification %>
 
           <%= hidden_field_tag :current_step, 'step3' %>
-          <%= f.input :id_card_img %>
-          <%= f.input :driver_license %>
-          <%= f.input :vehicle_registration %>
 
-          <%= f.submit 'Finish' %>
+          <!-- Cedula -->
+          <div class="row form-group">
+						<div class="col-md-10">
+              <%= f.input :id_card_img, as: :file,
+                          input_html: { class: 'form-control', accept: '.jpg, .jpeg, .png' },
+                          label: 'Cédula (foto)'
+              %>
+            </div>
+          </div><!-- Cedula -->
+
+          <!-- Licencia -->
+          <div class="row form-group">
+						<div class="col-md-10">
+              <%= f.input :driver_license, as: :file,
+                          input_html: { class: 'form-control', accept: '.jpg, .jpeg, .png' },
+                          label: 'Licencia de Conducir (foto)'
+              %>
+            </div>
+          </div><!-- Licencia -->
+
+          <!-- Registro -->
+          <div class="row form-group">
+						<div class="col-md-10">
+              <%= f.input :vehicle_registration, as: :file,
+                          input_html: { class: 'form-control', accept: '.jpg, .jpeg, .png' },
+                          label: 'Registro Vehicular (foto)'
+              %>
+            </div>
+          </div><!-- Registro -->
+
+          <%= f.submit 'Finish', class: "btn btn-primary" %>
+
         <% end %>
       </div>
     </div>

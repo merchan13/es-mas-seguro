@@ -1,3 +1,5 @@
+<%= render 'header' %>
+
 <div class="gtco-section">
 	<div class="gtco-container">
 		<div class="row">
@@ -14,6 +16,7 @@
 
           <%= hidden_field_tag :current_step, 'step1' %>
 
+          <!-- Nombre -->
           <div class="row form-group">
 						<div class="col-md-10">
               <%= f.input :full_name,
@@ -22,7 +25,9 @@
                           label: 'Nombre completo'
               %>
 						</div>
-					</div>
+					</div><!-- Nombre -->
+
+          <!-- Direccion -->
           <div class="row form-group">
 						<div class="col-md-10">
               <%= f.input :address,
@@ -31,7 +36,9 @@
                           label: 'Dirección de vivienda'
               %>
             </div>
-          </div>
+          </div><!-- Direccion -->
+
+          <!-- Telefono -->
           <div class="row form-group">
 						<div class="col-md-10">
               <%= f.input :phone_number,
@@ -40,7 +47,9 @@
                           label: 'Número telefónico'
               %>
             </div>
-          </div>
+          </div><!-- Telefono -->
+
+          <!-- Email -->
           <div class="row form-group">
 						<div class="col-md-10">
               <%= f.input :email,
@@ -49,7 +58,9 @@
                           label: 'Email'
               %>
             </div>
-          </div>
+          </div><!-- Email -->
+
+          <!-- Cedula -->
           <div class="row form-group">
 						<div class="col-md-10">
               <%= f.input :id_card,
@@ -58,7 +69,9 @@
                           label: 'Cédula'
               %>
             </div>
-          </div>
+          </div><!-- Cedula -->
+
+          <!-- Pais -->
           <div class="row form-group">
 						<div class="col-md-10">
               <%= f.input :country,
@@ -67,8 +80,10 @@
                           label: 'País de nacimiento'
               %>
             </div>
-          </div>
+          </div><!-- Pais -->
+
           <%= f.submit 'Continue', class: "btn btn-primary" %>
+
         <% end %>
 			</div>
 		</div>
