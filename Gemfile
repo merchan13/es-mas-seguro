@@ -16,10 +16,22 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'sprockets'
+
+# SMTP 
 gem 'sendgrid-ruby'
+
+# Forms herlpers
 gem 'simple_form'
 gem 'localized_country_select'
+
+# Font Awesome
 gem 'font-awesome-sass'
+
+# Image upload
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog-aws'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug', platform: :mri
