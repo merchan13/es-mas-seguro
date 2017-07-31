@@ -1,0 +1,2 @@
+class LifeInsuranceRequestsController < ApplicationController
+end

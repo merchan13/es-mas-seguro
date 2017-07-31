@@ -12,9 +12,6 @@ class PagesController < ApplicationController
   def car_insurance
   end
 
-  def fire_insurance
-  end
-
   def life_insurance
   end
 

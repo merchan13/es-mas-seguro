@@ -1,0 +1,3 @@
+class LifeInsuranceRequest < ApplicationRecord
+
+end

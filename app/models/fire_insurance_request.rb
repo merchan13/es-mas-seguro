@@ -1,0 +1,3 @@
+class FireInsuranceRequest < ApplicationRecord
+
+end
