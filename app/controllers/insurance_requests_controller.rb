@@ -7,7 +7,7 @@ class InsuranceRequestsController < ApplicationController
 
       if !params[:contact_via].nil?
         params[:contact_via].each do |c|
-          via += c
+          via += " #{c}"
         end
       else
         via = nil
