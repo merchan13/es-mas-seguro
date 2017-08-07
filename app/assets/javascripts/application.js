@@ -15,3 +15,22 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+function contactViaCheck(contactVia) {
+    document.getElementById('if_via_1').style.display = 'none';
+    document.getElementById('if_via_2').style.display = 'none';
+    document.getElementById('if_via_3').style.display = 'none';
+    document.getElementById('contact_via_1_label').style.color = '#828282';
+    document.getElementById('contact_via_2_label').style.color = '#828282';
+    document.getElementById('contact_via_3_label').style.color = '#828282';
+
+    document.getElementById('if_via_' + contactVia).style.display = 'block';
+    document.getElementById('contact_via_' + contactVia + '_label').style.color = '#F85A16';
+}
+
+function insuranceTypeCheck(type) {
+  if (document.getElementById(type + '_check').checked) {
+    document.getElementById(type + '_check_label').style.color = '#F85A16';
+  }
+  else document.getElementById(type + '_check_label').style.color = '#828282';
+}

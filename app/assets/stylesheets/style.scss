@@ -67,9 +67,14 @@ p {
 
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
+  color: #563d7c;
   font-family: "Raleway", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
+}
+
+textarea {
+  resize: none;
 }
 
 ::-webkit-selection {
@@ -1519,4 +1524,13 @@ abbr[title] {
   display: inline-block;
   zoom: 1;
   *display: inline;
+}
+
+.modal-header {
+  background-color: #fbac8a;
+  color: #fff;
+}
+
+.modal-header h4 {
+  color: #fff;
 }

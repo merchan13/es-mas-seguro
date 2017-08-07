@@ -3,7 +3,7 @@ class RequestNotifierMailer < ApplicationMailer
 
   # send a signup email to the user, pass in the user object that   contains the user's email address
   def send_request_email(request)
-    @cir_wizard = request
+    @request = request
     mail(
           :to => "jmerchan@labequis.com",
           :subject => 'Información de nueva solicitud de seguro.'

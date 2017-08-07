@@ -1,2 +1,0 @@
-class FireInsuranceRequestsController < ApplicationController
-end

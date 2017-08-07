@@ -6,41 +6,25 @@
   <body>
 
     <h1>
-      Nueva solicitud de seguro de Automóvil
+      Nueva solicitud de Seguro
     </h1>
 
     <hr>
 
     <strong><h2>Datos del cliente</h2></strong>
-    <p><strong>Nombre: </strong><%= @cir_wizard.full_name%></p>
-    <p><strong>Cédula: </strong><%= @cir_wizard.id_card%></p>
-    <p><strong>Dirección: </strong><%= @cir_wizard.address%></p>
-    <p><strong>Teléfono: </strong><%= @cir_wizard.phone_number%></p>
-    <p><strong>Email: </strong><%= @cir_wizard.email%></p>
-    <p><strong>Pais: </strong><%= @cir_wizard.country%></p>
+    <p><strong>Nombre: </strong><%= @request.name%></p>
+    <p><strong>Vía de contacto: </strong><%= "#{@request.contact_via}" %></p>
     <br>
 
-    <strong><h2>Datos del automóvil</h2></strong>
-    <p><strong>Marca: </strong><%= @cir_wizard.car_brand%></p>
-    <p><strong>Modelo: </strong><%= @cir_wizard.car_model%></p>
-    <p><strong>Año: </strong><%= @cir_wizard.car_year%></p>
-    <p><strong>Valor: </strong><%= @cir_wizard.car_value%></p>
+    <strong><h2>Seguros solicitados</h2></strong>
+    <p><%= @request.insurance_type %></p>
     <br>
 
-    <strong><h2>Documentos</h2></strong>
-    <p>
-      <strong>Cédula: </strong>
-      <a href="<%= @cir_wizard.id_card_img.url %>">[ Ver Cédula ]</a>
-    </p>
-    <p>
-      <strong>Licencia: </strong>
-      <a href="<%= @cir_wizard.driver_license.url %>">[ Ver Licencia de Conducir ]</a>
-    </p>
-    <p>
-      <strong>Registro vehicular: </strong>
-      <a href="<%= @cir_wizard.vehicle_registration.url %>">[ Ver Registro Vehicular ]</a>
-    </p>
-    <br>
+    <% if !@request.message.nil? %>
+      <strong><h2>Comentarios</h2></strong>
+      <p><%= @request.message %></p>
+      <br>
+    <% end %>
 
     <hr>
 
