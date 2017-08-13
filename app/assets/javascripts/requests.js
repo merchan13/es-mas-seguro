@@ -9,9 +9,6 @@ init_request_form = function() {
     $('#new-request-form').find('input:checkbox').removeAttr('checked');
     $('#new-request-form').find('input:radio').removeAttr('checked');
 
-    document.getElementById('if_via_1').style.display = 'none';
-    document.getElementById('if_via_2').style.display = 'none';
-    document.getElementById('if_via_3').style.display = 'none';
     document.getElementById('contact_via_1_label').style.color = '#828282';
     document.getElementById('contact_via_2_label').style.color = '#828282';
     document.getElementById('contact_via_3_label').style.color = '#828282';

@@ -6,7 +6,7 @@ class RequestNotifierMailer < ApplicationMailer
     @request = request
     mail(
           :to => "jmerchan@labequis.com",
-          :subject => 'Información de nueva solicitud de seguro.'
+          :subject => "Información de nueva solicitud de seguro. [##{@request.id}]"
         )
   end
 end

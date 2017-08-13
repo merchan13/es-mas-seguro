@@ -10,30 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170806190829) do
-
-  create_table "car_insurance_requests", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "cars_insurance_requests", force: :cascade do |t|
-    t.string   "full_name"
-    t.string   "address"
-    t.string   "phone_number"
-    t.string   "email"
-    t.string   "id_card"
-    t.string   "country"
-    t.string   "id_card_img"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.string   "car_brand"
-    t.string   "car_model"
-    t.string   "car_year"
-    t.string   "car_value"
-    t.string   "driver_license"
-    t.string   "vehicle_registration"
-  end
+ActiveRecord::Schema.define(version: 20170813215945) do
 
   create_table "insurance_requests", force: :cascade do |t|
     t.string   "name",           null: false
@@ -41,7 +18,9 @@ ActiveRecord::Schema.define(version: 20170806190829) do
     t.text     "message",        null: false
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.string   "contact_via"
+    t.string   "contact_via",    null: false
+    t.string   "email",          null: false
+    t.string   "phone",          null: false
   end
 
 end

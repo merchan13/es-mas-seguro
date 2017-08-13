@@ -69,8 +69,12 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #000;
   color: #563d7c;
   font-family: "Raleway", Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 0 20px 0;
+}
+
+h2 {
+  font-weight: 500;
 }
 
 textarea {
@@ -123,7 +127,7 @@ textarea {
 }
 .gtco-nav a {
   padding: 5px 10px;
-  color: #fff;
+  color: #F85A16;
 }
 @media screen and (max-width: 768px) {
   .gtco-nav .menu-1, .gtco-nav .menu-2 {
@@ -145,12 +149,13 @@ textarea {
   padding: 30px 10px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
+  color: #F85A16;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 .gtco-nav ul li a:hover, .gtco-nav ul li a:focus, .gtco-nav ul li a:active {
-  color: white;
+  color: #563d7c;
 }
 .gtco-nav ul li.has-dropdown {
   position: relative;
@@ -235,7 +240,7 @@ textarea {
   box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
 }
 .gtco-nav ul li.active > a {
-  color: #fff !important;
+  color: #563d7c !important;
 }
 
 #gtco-header,
@@ -521,7 +526,7 @@ form label {
 .gtco-cover .display-tc h2 {
   margin: 0;
   padding: 0;
-  color: white;
+  color: #563d7c;
   text-transform: uppercase;
 }
 #gtco-header .display-tc h1,
@@ -694,7 +699,7 @@ form label {
 .feature-left .feature-copy h3 {
   text-transform: uppercase;
   font-size: 18px;
-  color: #5d5d5d;
+  color: #563d7c;
   margin-bottom: 10px;
 }
 
@@ -1313,18 +1318,18 @@ form label {
   border: 2px solid #d9534f;
 }
 .btn-white:hover, .btn-white:focus, .btn-white:active {
-  color: #000;
-  background: #f2f2f2 !important;
-  border-color: #f2f2f2 !important;
+  color: #fff;
+  background: #79589F !important;
+  border-color: #79589F !important;
 }
 .btn-white.btn-outline {
-  color: #fff;
-  border: 2px solid #fff;
+  color: #f86a2d;
+  border: 2px solid #F85A16;
 }
 .btn-white.btn-outline:hover, .btn-white.btn-outline:focus, .btn-white.btn-outline:active {
-  background: #fff;
-  color: #000;
-  border: 2px solid #fff;
+  background: #79589F;
+  color: #fff;
+  border: 2px solid #79589F;
 }
 
 .btn-outline {
@@ -1437,6 +1442,12 @@ abbr[title] {
   padding: 20px;
 }
 
+.bs-wizard > .bs-wizard-step .bs-wizard-info .fa {
+  color: #F85A16;
+  font-size: 35px;
+  width: 30%;
+}
+
 .bs-wizard > .bs-wizard-step > .bs-wizard-dot {
   position: absolute;
   width: 30px;
@@ -1516,7 +1527,6 @@ abbr[title] {
   float: left;
   width: 100%;
   padding: 3em 0;
-  background: #f6f6f6;
 }
 .gtco-client .client img {
   margin-top: 10px;
@@ -1527,7 +1537,7 @@ abbr[title] {
 }
 
 .modal-header {
-  background-color: #fbac8a;
+  background-color: #f86a2d;
   color: #fff;
 }
 

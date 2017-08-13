@@ -8,7 +8,9 @@
       </div>
       <%= form_tag ('/insurance_requests'), remote: true, id: 'new-request-form' do %>
         <div class="modal-body">
+
           <div id="request-error"></div>
+
           <!-- TIPO DE SEGURO -->
           <div class="form-group row col-md-12" style="float:none">
 						<div class="col-md-12">
@@ -28,59 +30,57 @@
 						</div>
 					</div><!-- TIPO DE SEGURO -->
           <br>
+
           <!-- CONTACTO -->
           <div class="form-group row col-md-12" style="float:none">
+            <!-- NOMBRE -->
+            <div class="form-group row col-md-12" style="float:none">
+  						<div class="col-md-10">
+  							<h4>Vamos a necesitar tu nombre...</h4>
+  							<input type="text" name="name" class="form-control" placeholder="Hola mi nombre es...">
+  						</div>
+  					</div><!-- NOMBRE -->
+            <br>
+
+            <!-- CORREO -->
+            <div class="form-group row col-md-12" style="float:none">
+  						<div class="col-md-10">
+  							<h4>Tu correo electrónico...</h4>
+  							<input type="text" name="email" class="form-control" placeholder="esmasseguro@ejemplo.com">
+  						</div>
+  					</div><!-- CORREO -->
+            <br>
+
+            <!-- NUMERO TELF -->
+            <div class="form-group row col-md-12" style="float:none">
+  						<div class="col-md-10">
+  							<h4>Y tu número telefónico</h4>
+  							<input type="text" name="phone" class="form-control" placeholder="+507 5555 5555">
+  						</div>
+  					</div><!-- NUMERO TELF -->
+            <br>
+
+            <!-- COMO TE GUSTARIA SER CONTACTADO -->
 						<div class="col-md-12">
 							<h4>¿Cómo te gustaría ser contactado?</h4>
               <!-- Llamada -->
               <label class="radio-inline" id="contact_via_1_label" style="width: 44%;">
-                <input type="radio" name="contact_via_check" id="via_1" value="" onclick="javascript:contactViaCheck('1');"> Llamada a mi teléfono
+                <input type="radio" name="contact_via_check" id="via_1" value="llamada telefónica" onclick="javascript:contactViaCheck('1');"> Llamada a mi teléfono
               </label>
 
               <!-- WhatsApp -->
               <label class="radio-inline" id="contact_via_2_label" style="width: 25%;">
-                <input type="radio" name="contact_via_check" id="via_2" value="" onclick="javascript:contactViaCheck('2');"> WhatsApp
+                <input type="radio" name="contact_via_check" id="via_2" value="WhatsApp" onclick="javascript:contactViaCheck('2');"> WhatsApp
               </label>
 
               <!-- Email -->
               <label class="radio-inline" id="contact_via_3_label" style="width: 25%;">
-                <input type="radio" name="contact_via_check" id="via_3" value="" onclick="javascript:contactViaCheck('3');"> Email
+                <input type="radio" name="contact_via_check" id="via_3" value="email" onclick="javascript:contactViaCheck('3');"> Email
               </label>
-						</div>
+						</div><!-- COMO TE GUSTARIA SER CONTACTADO -->
 					</div><!-- CONTACTO -->
           <br>
-          <!-- VIA_1 -->
-          <div id="if_via_1" class="form-group row col-md-12" style="float:none; display:none">
-            <div class="col-md-9">
-  						<h4>¿A qué número te podemos llamar?</h4>
-  						<input type="text" name="contact_via[]" class="form-control" placeholder="+305 555 555 55 55">
-            </div>
-					</div><!-- VIA_1 -->
 
-          <!-- VIA_2 -->
-          <div id="if_via_2" class="form-group row col-md-12" style="float:none; display:none">
-            <div class="col-md-9">
-  						<h4>¿A qué número te podemos escribir?</h4>
-  						<input type="text" name="contact_via[]" class="form-control" placeholder="+305 555 555 55 55">
-            </div>
-					</div><!-- VIA_2 -->
-
-          <!-- VIA_3 -->
-          <div id="if_via_3" class="form-group row col-md-12" style="float:none; display:none">
-            <div class="col-md-9">
-              <h4>¿A qué correo te podemos escribir?</h4>
-              <input type="text" name="contact_via[]" class="form-control" placeholder="esmasseguro@ejemplo.com">
-            </div>
-					</div><!-- VIA_3 -->
-          <br>
-          <!-- NOMBRE -->
-          <div class="form-group row col-md-12" style="float:none">
-						<div class="col-md-10">
-							<h4>Para contactarte vamos a necesitar tu nombre</h4>
-							<input type="text" name="name" class="form-control" placeholder="Hola mi nombre es...">
-						</div>
-					</div><!-- NOMBRE -->
-          <br>
           <!-- MENSAJE -->
           <div class="form-group row col-md-12" style="float:none">
 						<div class="col-md-10">
@@ -89,7 +89,9 @@
 						</div>
 					</div><!-- MENSAJE -->
           <br>
+
           <div id="request-error-2"></div>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
