@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get 'faq',      to: 'pages#faq'
 
   resource :insurance_requests
+  resource :complaints
 
 end

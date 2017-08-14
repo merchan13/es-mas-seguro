@@ -16,15 +16,27 @@
 						<div class="col-md-12">
 							<h4>¿Qué tipo de seguro necesitas? Puedes seleccionar varios!</h4>
               <label class="checkbox-inline" id="li_check_label" style="width: 30%;">
-                <input type="checkbox" id="li_check" name="request[]" value="Vida" onclick="javascript:insuranceTypeCheck('li');">
+                <input  type="checkbox"
+                        id="li_check"
+                        name="request[]"
+                        value="Vida"
+                        onclick="javascript:insuranceTypeCheck('li');">
                 Vida <i class="fa fa-heart-o" aria-hidden="true"></i>
               </label>
               <label class="checkbox-inline" id="ci_check_label" style="width: 30%;">
-                <input type="checkbox" id="ci_check" name="request[]" value="Automóvil" onclick="javascript:insuranceTypeCheck('ci');">
+                <input  type="checkbox"
+                        id="ci_check"
+                        name="request[]"
+                        value="Automóvil"
+                        onclick="javascript:insuranceTypeCheck('ci');">
                 Automóvil <i class="fa fa-car" aria-hidden="true"></i>
               </label>
               <label class="checkbox-inline" id="fi_check_label" style="width: 30%;">
-                <input type="checkbox" id="fi_check" name="request[]" value="Incendio" onclick="javascript:insuranceTypeCheck('fi');">
+                <input  type="checkbox"
+                        id="fi_check"
+                        name="request[]"
+                        value="Incendio"
+                        onclick="javascript:insuranceTypeCheck('fi');">
                 Incendio <i class="fa fa-fire-extinguisher" aria-hidden="true"></i>
               </label>
 						</div>
@@ -37,7 +49,13 @@
             <div class="form-group row col-md-12" style="float:none">
   						<div class="col-md-10">
   							<h4>Vamos a necesitar tu nombre...</h4>
-  							<input type="text" name="name" class="form-control" placeholder="Hola mi nombre es...">
+                <input  type="text"
+                        name="name"
+                        class="form-control"
+                        placeholder="Hola mi nombre es..."
+                        pattern="^[a-zA-Z ,.'-]{2,}$"
+                        title="Debe introducir un nombre válido"
+                        required>
   						</div>
   					</div><!-- NOMBRE -->
             <br>
@@ -46,7 +64,13 @@
             <div class="form-group row col-md-12" style="float:none">
   						<div class="col-md-10">
   							<h4>Tu correo electrónico...</h4>
-  							<input type="text" name="email" class="form-control" placeholder="esmasseguro@ejemplo.com">
+                <input  type="text"
+                        name="email"
+                        class="form-control"
+                        placeholder="esmasseguro@ejemplo.com"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                        title="Debe introducir un correo válido"
+                        required>
   						</div>
   					</div><!-- CORREO -->
             <br>
@@ -55,7 +79,13 @@
             <div class="form-group row col-md-12" style="float:none">
   						<div class="col-md-10">
   							<h4>Y tu número telefónico</h4>
-  							<input type="text" name="phone" class="form-control" placeholder="+507 5555 5555">
+                <input   type="text"
+                        name="phone"
+                        class="form-control"
+                        placeholder="+507 5555 5555"
+                        pattern='^\+?\d{8,13}$'
+                        title="Debe introducir un teléfono válido, sin espacios o caracteres especiales (sólo se acepta el + al comienzo del número)"
+                        required>
   						</div>
   					</div><!-- NUMERO TELF -->
             <br>
@@ -65,17 +95,30 @@
 							<h4>¿Cómo te gustaría ser contactado?</h4>
               <!-- Llamada -->
               <label class="radio-inline" id="contact_via_1_label" style="width: 44%;">
-                <input type="radio" name="contact_via_check" id="via_1" value="llamada telefónica" onclick="javascript:contactViaCheck('1');"> Llamada a mi teléfono
+                <input  type="radio"
+                        name="contact_via_check"
+                        id="via_1"
+                        value="llamada telefónica"
+                        onclick="javascript:contactViaCheck('1');"
+                        required> Llamada a mi teléfono
               </label>
 
               <!-- WhatsApp -->
               <label class="radio-inline" id="contact_via_2_label" style="width: 25%;">
-                <input type="radio" name="contact_via_check" id="via_2" value="WhatsApp" onclick="javascript:contactViaCheck('2');"> WhatsApp
+                <input  type="radio"
+                        name="contact_via_check"
+                        id="via_2"
+                        value="WhatsApp"
+                        onclick="javascript:contactViaCheck('2');"> WhatsApp
               </label>
 
               <!-- Email -->
               <label class="radio-inline" id="contact_via_3_label" style="width: 25%;">
-                <input type="radio" name="contact_via_check" id="via_3" value="email" onclick="javascript:contactViaCheck('3');"> Email
+                <input  type="radio"
+                        name="contact_via_check"
+                        id="via_3"
+                        value="email"
+                        onclick="javascript:contactViaCheck('3');"> Email
               </label>
 						</div><!-- COMO TE GUSTARIA SER CONTACTADO -->
 					</div><!-- CONTACTO -->
@@ -104,6 +147,101 @@
   </div>
 </div><!-- GENERAL -->
 
+<!-- RECLAMO -->
+<div class="modal fade" id="complaintModal" tabindex="-1" role="dialog" aria-labelledby="complaintModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header modal-complaint">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="complaintModalLabel">Haznos saber tu problema para poder ayudarte</h4>
+      </div>
+      <%= form_tag ('/complaints'), remote: true, id: 'new-complaint-form' do %>
+        <div class="modal-body">
+
+          <div id="complaint-error"></div>
+
+          <!-- #POLIZA -->
+          <div class="form-group row col-md-12" style="float:none">
+						<div class="col-md-10">
+							<h4>Por favor indíca el # de la póliza</h4>
+							<input  type="text"
+                      name="policy_number"
+                      class="form-control"
+                      placeholder="Poliza #12345"
+                      pattern="^[0-9]*$"
+                      title="Debe contener únicamente números, sin letras o caracteres especiales"
+                      required>
+						</div>
+					</div><!-- #POLIZA -->
+
+          <!-- NOMBRE -->
+          <div class="form-group row col-md-12" style="float:none">
+						<div class="col-md-10">
+							<h4>Vamos a necesitar tu nombre...</h4>
+							<input  type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder="Hola mi nombre es..."
+                      pattern="^[a-zA-Z ,.'-]{2,}$"
+                      title="Debe introducir un nombre válido"
+                      required>
+						</div>
+					</div><!-- NOMBRE -->
+          <br>
+
+          <!-- CORREO -->
+          <div class="form-group row col-md-12" style="float:none">
+						<div class="col-md-10">
+							<h4>Tu correo electrónico...</h4>
+							<input  type="text"
+                      name="email"
+                      class="form-control"
+                      placeholder="esmasseguro@ejemplo.com"
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                      title="Debe introducir un correo válido"
+                      required>
+						</div>
+					</div><!-- CORREO -->
+          <br>
+
+          <!-- NUMERO TELF -->
+          <div class="form-group row col-md-12" style="float:none">
+						<div class="col-md-10">
+							<h4>Y tu número telefónico</h4>
+							<input   type="text"
+                      name="phone"
+                      class="form-control"
+                      placeholder="+507 5555 5555"
+                      pattern='^\+?\d{8,13}$'
+                      title="Debe introducir un teléfono válido, sin espacios o caracteres especiales (sólo se acepta el + al comienzo del número)"
+                      required>
+						</div>
+					</div><!-- NUMERO TELF -->
+          <br>
+
+          <!-- MENSAJE -->
+          <div class="form-group row col-md-12" style="float:none">
+						<div class="col-md-10">
+							<h4>Por favor cuéntanos cúal es tu reclamo para poder ayudarte lo más pronto posible</h4>
+							<textarea name="message" cols="30" rows="3" class="form-control" placeholder="Escribe tu mensaje por aquí" required></textarea>
+						</div>
+					</div><!-- MENSAJE -->
+          <br>
+
+          <div id="complaint-error-2"></div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <%= button_tag(type: :submit, class: "btn btn-primary") do %>
+            Enviar
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div><!-- RECLAMO -->
+
 <!-- EXITO -->
 <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel">
   <div class="modal-dialog" role="document">
@@ -119,12 +257,13 @@
           <div class="col-md-12">
             <h3 style="text-align:center;">¡Estamos felices de que hayas realizado tu solicitud con nosotros!</h3>
             <br>
-            <h4 style="line-height:1.5;">Procesaremos tu solicitud inmediatament y en unos minutos te estaremos contactando por la vía indicada.</h4>
+            <h4 style="line-height:1.5;">Procesaremos tu solicitud inmediatamente y en unos minutos te estaremos contactando por la vía indicada.</h4>
             <h4 style="line-height:1.5;">Te invitamos a que sigas explorando las otras opciones que tenemos para ti, si tienes alguna pregunta no dudes en contactarnos.</h4>
             <br>
             <br>
-            <h4 style="text-align:center;">Con nosotros te sentiras +Seguro.</h4>
+            <h4 style="text-align:center;">Con nosotros te sentirás +Seguro.</h4>
           </div>
+        </div>
       </div>
 
       <div class="modal-footer">
@@ -134,3 +273,35 @@
     </div>
   </div>
 </div><!-- EXITO -->
+
+<!-- DISCULPAS -->
+<div class="modal fade" id="apologiesModal" tabindex="-1" role="dialog" aria-labelledby="apologiesModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="apologiesModalLabel">Reclamo enviado ¡Gracias!</h4>
+      </div>
+
+      <div class="modal-body">
+        <div class="row col-md-12" style="float:none">
+          <div class="col-md-12">
+            <h3 style="text-align:center;">Nuevamente nos disculpamos por generarte un inconveniente.</h3>
+            <br>
+            <h4 style="line-height:1.5;">Procesaremos tu reclamo inmediatamente y en unos minutos te estaremos contactando para poder solucionar tu problema.</h4>
+            <h4 style="line-height:1.5;">Te invitamos a que sigas explorando las otras opciones que tenemos para ti, si tienes alguna pregunta no dudes en contactarnos.</h4>
+            <br>
+            <br>
+            <h4 style="text-align:center;">Con nosotros te sentirás +Seguro.</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+</div><!-- DISCULPAS -->
