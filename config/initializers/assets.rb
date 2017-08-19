@@ -20,6 +20,8 @@ Rails.application.config.assets.precompile +=
       owl.carousel.min.css
       owl.theme.default.min.css
       style.scss
+      device-mockups.scss
+      device-mockups2.scss
 
       modernizr-2.6.2.min.js
       jquery.min.js
