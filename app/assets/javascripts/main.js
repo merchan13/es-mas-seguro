@@ -248,6 +248,24 @@
 
 	};
 
+  var goToSection = function() {
+
+		$('.js-gosection').on('click', function(event){
+			event.preventDefault();
+
+      var id = this.id;
+
+      var idToScroll = id.replace('link', '')
+
+			$('html, body').animate({
+				scrollTop: $('#'+idToScroll).offset().top - 125
+			}, 500, 'easeInOutExpo');
+
+			return false;
+		});
+
+	};
+
 
 	// Loading page
 	var loaderPage = function() {
@@ -283,6 +301,7 @@
 		testimonialCarousel();
 		tabs();
 		goToTop();
+    goToSection();
 		loaderPage();
 		counterWayPoint();
 	});

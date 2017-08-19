@@ -55,7 +55,7 @@ a {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-a:hover, a:active, a:focus {
+a:hover, a:active{
   color: #F85A16;
   outline: none;
   text-decoration: none;
@@ -105,13 +105,14 @@ textarea {
 }
 
 .gtco-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   margin: 0;
   padding: 0;
   width: 100%;
-  padding: 40px 0;
+  padding: 15px 0;
   z-index: 1001;
+  background-color: white;
 }
 @media screen and (max-width: 768px) {
   .gtco-nav {
@@ -1212,8 +1213,12 @@ form label {
 .btn.btn-lg {
   padding: 18px 36px !important;
 }
-.btn:hover, .btn:active, .btn:focus {
+.btn:hover, .btn:active {
   box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn:focus{
   outline: none !important;
 }
 
@@ -1222,18 +1227,27 @@ form label {
   color: #fff;
   border: 2px solid #F85A16 !important;
 }
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+.btn-primary:hover, .btn-primary:active {
   background: #f96c2f !important;
   border-color: #f96c2f !important;
 }
+
+.btn-primary:focus {
+  outline: none !important;
+}
+
 .btn-primary.btn-outline {
   background: transparent;
   color: #F85A16;
   border: 2px solid #F85A16;
 }
-.btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
+.btn-primary.btn-outline:hover, .btn-primary.btn-outline:active {
   background: #F85A16;
   color: #fff;
+}
+
+.btn-primary.btn-outline:focus {
+  outline: none !important;
 }
 
 .btn-success {
@@ -1241,18 +1255,27 @@ form label {
   color: #fff;
   border: 2px solid #5cb85c;
 }
-.btn-success:hover, .btn-success:focus, .btn-success:active {
+.btn-success:hover, .btn-success:active {
   background: #4cae4c !important;
   border-color: #4cae4c !important;
 }
+
+.btn-primary:focus{
+  outline: none !important;
+}
+
 .btn-success.btn-outline {
   background: transparent;
   color: #5cb85c;
   border: 2px solid #5cb85c;
 }
-.btn-success.btn-outline:hover, .btn-success.btn-outline:focus, .btn-success.btn-outline:active {
+.btn-success.btn-outline:hover, .btn-success.btn-outline:active {
   background: #5cb85c;
   color: #fff;
+}
+
+.btn-success.btn-outline:focus{
+  outline: none !important;
 }
 
 .btn-info {
@@ -1294,21 +1317,21 @@ form label {
 }
 
 .btn-danger {
-  background: #d9534f;
+  background: #f81643;
   color: #fff;
-  border: 2px solid #d9534f;
+  border: 2px solid #f81643;
 }
-.btn-danger:hover, .btn-danger:focus, .btn-danger:active {
-  background: #d43f3a !important;
-  border-color: #d43f3a !important;
+.btn-danger:hover, .btn-danger:active {
+  background: #df133c !important;
+  border-color: #df133c !important;
 }
 .btn-danger.btn-outline {
   background: transparent;
-  color: #d9534f;
-  border: 2px solid #d9534f;
+  color: #f81643;
+  border: 2px solid #f81643;
 }
-.btn-danger.btn-outline:hover, .btn-danger.btn-outline:focus, .btn-danger.btn-outline:active {
-  background: #d9534f;
+.btn-danger.btn-outline:hover, .btn-danger.btn-outline:active {
+  background: #f81643;
   color: #fff;
 }
 
@@ -1317,19 +1340,28 @@ form label {
   color: #fff;
   border: 2px solid #d9534f;
 }
-.btn-white:hover, .btn-white:focus, .btn-white:active {
+.btn-white:hover, .btn-white:active {
   color: #fff;
   background: #79589F !important;
   border-color: #79589F !important;
 }
+
+.btn-white:focus{
+  outline: none !important;
+}
+
 .btn-white.btn-outline {
   color: #f86a2d;
   border: 2px solid #F85A16;
 }
-.btn-white.btn-outline:hover, .btn-white.btn-outline:focus, .btn-white.btn-outline:active {
+.btn-white.btn-outline:hover, .btn-white.btn-outline:active {
   background: #79589F;
   color: #fff;
   border: 2px solid #79589F;
+}
+
+.btn-white.btn-outline:focus{
+  outline: none !important;
 }
 
 .btn-outline {
@@ -1340,8 +1372,12 @@ form label {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-.btn-outline:hover, .btn-outline:focus, .btn-outline:active {
+.btn-outline:hover, .btn-outline:active {
   box-shadow: none;
+}
+
+.btn-outline:focus{
+  outline: none !important;
 }
 
 .btn.with-arrow {
@@ -1543,4 +1579,24 @@ abbr[title] {
 
 .modal-header h4 {
   color: #fff;
+}
+
+.fade.in {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+ a:focus {
+  outline: none;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background: #F85A16;
+  border: 2px solid #F85A16 !important;
+}
+
+.btn-danger:focus, .btn-danger.focus {
+  color: #fff;
+  background: #f81643;
+  border: 2px solid #f81643 !important;
 }
