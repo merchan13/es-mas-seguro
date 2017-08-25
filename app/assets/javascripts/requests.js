@@ -12,9 +12,10 @@ init_request_form = function() {
     document.getElementById('contact_via_1_label').style.color = '#828282';
     document.getElementById('contact_via_2_label').style.color = '#828282';
     document.getElementById('contact_via_3_label').style.color = '#828282';
-    document.getElementById('li_check_label').style.color = '#828282';
+    document.getElementById('hi_check_label').style.color = '#828282';
     document.getElementById('ci_check_label').style.color = '#828282';
     document.getElementById('fi_check_label').style.color = '#828282';
+    document.getElementById('li_check_label').style.color = '#828282';
 
     var alert_html = '<div id="request-error"></div>';
     var alert_html2 = '<div id="request-error-2"></div>';
