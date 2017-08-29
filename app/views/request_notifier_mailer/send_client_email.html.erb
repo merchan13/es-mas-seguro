@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>
+      Gracias por confiar en nosotros, pronto te contactaremos.
+    </h1>
+
+    <hr>
+  
+    <strong><h2>Datos del cliente</h2></strong>
+    <p><strong>Nombre: </strong><%= @request.name%></p>
+    <p><strong>Contacto: </strong><%= "#{@request.email} / #{@request.phone} (El cliente desea ser contactado vía #{@request.contact_via})" %></p>
+    <br>
+
+    <strong><h2>Seguros solicitados</h2></strong>
+    <p><%= @request.insurance_type %></p>
+    <br>
+
+    <% if !@request.message.nil? %>
+      <strong><h2>Comentarios</h2></strong>
+      <p><%= @request.message %></p>
+      <br>
+    <% end %>
+
+    <hr>
+
+  </body>
+</html>

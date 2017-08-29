@@ -12,7 +12,7 @@ class ComplaintsController < ApplicationController
 
       if @complaint.save
         ComplaintNotifierMailer.send_complaint_email(@complaint).deliver
-
+        ComplaintNotifierMailer.send_client_email(@complaint).deliver
         render json: @complaint
       else
         puts "Errores: #{@complaint.errors.full_messages}"

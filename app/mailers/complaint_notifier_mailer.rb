@@ -5,8 +5,17 @@ class ComplaintNotifierMailer < ApplicationMailer
   def send_complaint_email(complaint)
     @complaint = complaint
     mail(
-          :to => "jmerchan@labequis.com",
+          :to => "hola@esmasseguro.com",
+          :bcc => "jmerchan@labequis.com",
           :subject => "Información de reclamo sobre póliza de seguro. [##{@complaint.id}]"
+        )
+  end
+
+  def send_client_email(complaint)
+    @complaint = complaint
+    mail(
+          :to => "#{@complaint.email}",
+          :subject => "Recibimos su reclamo. [##{@complaint.id}]"
         )
   end
 end

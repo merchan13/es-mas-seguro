@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>
+      Estaremos contactándole para solucionar su problema.
+    </h1>
+
+    <hr>
+
+    <strong><h2>Datos del cliente</h2></strong>
+    <p><strong>Nombre: </strong><%= @complaint.name%></p>
+    <p><strong>Contacto: </strong><%= "#{@complaint.email} / #{@complaint.phone}" %></p>
+    <br>
+
+    <strong><h2>Póliza</h2></strong>
+    <p><%= @complaint.policy_number %></p>
+    <br>
+
+    <% if !@complaint.message.nil? %>
+      <strong><h2>Reclamo</h2></strong>
+      <p><%= @complaint.message %></p>
+      <br>
+    <% end %>
+
+    <hr>
+
+  </body>
+</html>

@@ -22,7 +22,7 @@ class InsuranceRequestsController < ApplicationController
 
       if @request.save
         RequestNotifierMailer.send_request_email(@request).deliver
-
+        RequestNotifierMailer.send_client_email(@request).deliver
         render json: @request
       else
         puts "Errores: #{@request.errors.full_messages}"
