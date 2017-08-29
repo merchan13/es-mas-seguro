@@ -1,5 +1,5 @@
 class RequestNotifierMailer < ApplicationMailer
-  default :from => 'info@esmasseguro.com'
+  default :from => %("+Seguro" <#{'info@esmasseguro.com'}>)
 
   def send_request_email(request)
     @request = request
