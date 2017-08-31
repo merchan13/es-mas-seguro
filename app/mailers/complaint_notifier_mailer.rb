@@ -1,11 +1,11 @@
 class ComplaintNotifierMailer < ApplicationMailer
-  default :from => %("+Seguro" <#{'hola@esmasseguro.com'}>)
+  default :from => %("+Seguro" <#{'info@esmasseguro.com'}>)
 
   # send a signup email to the user, pass in the user object that   contains the user's email address
   def send_complaint_email(complaint)
     @complaint = complaint
     mail(
-          :to => "hola@esmasseguro.com",
+          :to => "info@esmasseguro.com",
           :bcc => "jmerchan@labequis.com",
           :subject => "Información de reclamo sobre póliza de seguro. [##{@complaint.id}]"
         )
