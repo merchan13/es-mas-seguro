@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>+Seguro: Asesorías y Contrataciones de Seguros 100% digitales.</title>
+    <title>+Seguro: Cotizaciones de Seguros y Asesorías 100% digitales.</title>
 
     <meta charset="UTF-8">
   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<meta name="description" content="Reinventamos la experiencia en los seguros. Proceso 100% transparente y digital con el cual tendrás una atención rápida y más segura." />
+  	<meta name="description" content="Reinventamos la experiencia en los seguros. Seguros de auto, salud, incendios y de vida. Proceso 100% transparente y digital con el cual tendrás una atención rápida y más segura." />
 
     <%= csrf_meta_tags %>
 
@@ -19,6 +19,8 @@
     <%= stylesheet_link_tag "owl.theme.default.min" %>
 
   	<%= stylesheet_link_tag "style" %>
+
+    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
     <style>.async-hide { opacity: 0 !important} </style>
     <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -37,6 +39,53 @@
       ga('create', 'UA-100094539-2', 'auto');
       ga('require', 'GTM-M7KMK2L');
       ga('send', 'pageview');
+    </script>
+
+    <script>
+      $("#help").click(function(evt) {
+        ga('set','page','/help.html');
+        ga('send', 'pageview');
+      });
+
+      $("#asegurate-nav").click(function(evt) {
+        ga('set','page','/asegurate.html');
+        ga('send', 'pageview');
+      });
+
+      $("#asegurate-header").click(function(evt) {
+        ga('set','page','/asegurate.html');
+        ga('send', 'pageview');
+      });
+
+      $("#asegurate-steps").click(function(evt) {
+        ga('set','page','/asegurate.html');
+        ga('send', 'pageview');
+      });
+
+      $("#reclamo-nav").click(function(evt) {
+        ga('set','page','/reclamo.html');
+        ga('send', 'pageview');
+      });
+
+      $("#reclamo-header").click(function(evt) {
+        ga('set','page','/reclamo.html');
+        ga('send', 'pageview');
+      });
+
+      $("#reclamo-section").click(function(evt) {
+        ga('set','page','/reclamo.html');
+        ga('send', 'pageview');
+      });
+
+      $("#contratar-button").click(function(evt) {
+        ga('set','page','/contrato.html');
+        ga('send', 'pageview');
+      });
+
+      $("#reclamar-button").click(function(evt) {
+        ga('set','page','/reclamo.html');
+        ga('send', 'pageview');
+      });
     </script>
   </head>
 
