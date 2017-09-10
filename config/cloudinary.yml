@@ -1,0 +1,18 @@
+development:
+  cloud_name: merchanj
+  api_key: '948352554284497'
+  api_secret: ny1XPCNJVSre_cNkHCj6Kt51dUs
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: merchanj
+  api_key: '948352554284497'
+  api_secret: ny1XPCNJVSre_cNkHCj6Kt51dUs
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: merchanj
+  api_key: '948352554284497'
+  api_secret: ny1XPCNJVSre_cNkHCj6Kt51dUs
+  enhance_image_tag: true
+  static_image_support: false

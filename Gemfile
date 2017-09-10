@@ -17,7 +17,7 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'sprockets'
 
-# SMTP 
+# SMTP
 gem 'sendgrid-ruby'
 
 # Forms herlpers
@@ -32,6 +32,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
 gem 'figaro'
+gem 'cloudinary'
 
 group :development, :test do
   gem 'byebug', platform: :mri
