@@ -12,6 +12,54 @@
 
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
+    <style>
+      /* Center the loader */
+      #loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+      }
+
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      #myDiv {
+        display: none;
+        text-align: center;
+      }
+    </style>
+
+    <script>
+      var myVar;
+
+      function myFunction() {
+          myVar = setTimeout(showPage, 3000);
+      }
+
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+    </script>
+
     <style>.async-hide { opacity: 0 !important} </style>
     <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
       h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
@@ -32,18 +80,23 @@
     </script>
   </head>
 
-  <body>
-    <div id="page">
-      <%= render 'layouts/navigation' %>
+  <body onload="myFunction()" style="margin:0;">
 
-      <%= yield %>
+    <div id="loader"></div>
+
+    <div style="display:none;" id="myDiv">
+      <div id="page">
+        <%= render 'layouts/navigation' %>
+
+        <%= yield %>
+      </div>
+
+      <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+      </div>
+
+      <%= render 'layouts/footer'%>
     </div>
-
-    <div class="gototop js-top">
-      <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-    </div>
-
-    <%= render 'layouts/footer'%>
 
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700" %>
