@@ -13,52 +13,151 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
     <style>
-      /* Center the loader */
-      #loader {
+      body {
+        font-family: "Raleway", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.7;
+        color: #828282;
+        background: #fff;
+      }
+      #page {
+        position: relative;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+      }
+      .offcanvas #page {
+        overflow: hidden;
         position: absolute;
-        left: 50%;
-        top: 50%;
-        z-index: 1;
-        width: 150px;
-        height: 150px;
-        margin: -75px 0 0 -75px;
-        border: 16px solid #f3f3f3;
-        border-radius: 50%;
-        border-top: 16px solid #3498db;
-        width: 120px;
-        height: 120px;
-        -webkit-animation: spin 2s linear infinite;
-        animation: spin 2s linear infinite;
       }
-
-      @-webkit-keyframes spin {
-        0% { -webkit-transform: rotate(0deg); }
-        100% { -webkit-transform: rotate(360deg); }
+      .offcanvas #page:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 101;
+        background: rgba(0, 0, 0, 0.7);
+        content: "";
       }
-
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+      a {
+        color: #F85A16;
       }
-
-      #myDiv {
-        display: none;
-        text-align: center;
+      p {
+        margin-bottom: 20px;
+      }
+      h1, h2 {
+        color: #000;
+        color: #563d7c;
+        font-family: "Raleway", Arial, sans-serif;
+        font-weight: 600;
+        margin: 0 0 20px 0;
+      }
+      h2 {
+        font-weight: 500;
+      }
+      .gtco-container {
+        max-width: 1140px;
+        position: relative;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .gtco-nav {
+        position: fixed;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        padding: 15px 0;
+        z-index: 1001;
+        background-color: white;
+      }
+      .gtco-nav ul {
+        padding: 0;
+        margin: 2px 0 0 0;
+      }
+      .gtco-nav ul li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: inline;
+      }
+      .gtco-nav ul li a {
+        font-size: 14px;
+        padding: 30px 10px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+        color: #F85A16;
+      }
+      #gtco-header {
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+      #gtco-header .display-tc {
+        display: table-cell !important;
+        vertical-align: middle;
+      }
+      #gtco-header .display-tc h1,
+      #gtco-header .display-tc h2 {
+        margin: 0;
+        padding: 0;
+        color: #563d7c;
+        text-transform: uppercase;
+      }
+      #gtco-header .display-tc h1 {
+        margin-bottom: 0px;
+        font-size: 70px;
+        line-height: 1.5;
+      }
+      @media screen and (max-width: 768px) {
+        #gtco-header .display-tc h1 {
+          font-size: 40px;
+        }
+      }
+      #gtco-header .display-tc h2 {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+      }
+      .btn {
+        margin-right: 4px;
+        margin-bottom: 4px;
+        font-family: "Raleway", Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        padding: 8px 30px;
+      }
+      .btn.btn-lg {
+        padding: 18px 36px !important;
+      }
+      .btn-primary {
+        background: #F85A16;
+        color: #fff;
+        border: 2px solid #F85A16 !important;
+      }
+      .btn-white {
+        background: #d9534f;
+        color: #fff;
+        border: 2px solid #d9534f;
+      }
+      .btn-white.btn-outline {
+        color: #f86a2d;
+        border: 2px solid #F85A16;
+      }
+      .btn-outline {
+        background: none;
+        border: 2px solid gray;
+        font-size: 16px;
       }
     </style>
-
-    <script>
-      var myVar;
-
-      function myFunction() {
-          myVar = setTimeout(showPage, 3000);
-      }
-
-      function showPage() {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("myDiv").style.display = "block";
-      }
-    </script>
 
     <style>.async-hide { opacity: 0 !important} </style>
     <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -80,23 +179,19 @@
     </script>
   </head>
 
-  <body onload="myFunction()" style="margin:0;">
+  <body>
+    <div id="page">
+      <%= render 'layouts/navigation' %>
 
-    <div id="loader"></div>
-
-    <div style="display:none;" id="myDiv">
-      <div id="page">
-        <%= render 'layouts/navigation' %>
-
-        <%= yield %>
-      </div>
-
-      <div class="gototop js-top">
-        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-      </div>
-
-      <%= render 'layouts/footer'%>
+      <%= yield %>
     </div>
+
+    <div class="gototop js-top">
+      <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+    </div>
+
+    <%= render 'layouts/footer'%>
+
 
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700" %>
