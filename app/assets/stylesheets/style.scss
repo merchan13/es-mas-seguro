@@ -1470,3 +1470,128 @@ abbr[title] {
   background: #f81643;
   border: 2px solid #f81643 !important;
 }
+#asegurate-steps.hide-in-modal {
+  display: block;
+}
+#asegurate-steps.show-in-modal {
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+  header .display-tc h1, .gtco-cover .display-tc h1 {
+    font-size: 28px !important;
+  }
+  #gtco-header .display-tc h2, .gtco-cover .display-tc h2 {
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 14px;
+  }
+  .gtco-heading h2 {
+    font-size: 30px;
+  }
+  .gtco-heading p {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  .bs-wizard > .bs-wizard-step .bs-wizard-info {
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #asegurate-steps.hide-in-modal {
+    display: none;
+  }
+  #asegurate-steps.show-in-modal {
+    display: block;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+  }
+  #asegurate-steps.show-in-modal:before {
+    content: '!';
+  }
+  .bs-wizard > .bs-wizard-step .bs-wizard-info .fa {
+    font-size: 20px;
+    width: 25%;
+    margin: 10%;
+  }
+  #hi_check_label {
+    width: 48% !important
+  }
+  #ci_check_label {
+    width: 50% !important
+  }
+  #fi_check_label {
+    width: 48% !important
+  }
+  .form-control {
+    height: 40px;
+    font-size: 14px
+  }
+  #contact_via_1_label {
+    width: 100% !important
+  }
+  #contact_via_2_label {
+    width: 100% !important
+  }
+  #contact_via_3_label {
+    width: 100% !important
+  }
+  .radio-inline + .radio-inline {
+    margin-left: 0
+  }
+  .col-xs-2 {
+    width: 30%
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #asegurate-steps.hide-in-modal {
+    display: none;
+  }
+  #asegurate-steps.show-in-modal {
+    display: block;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+  }
+  #asegurate-steps.show-in-modal:before {
+    content: '!';
+  }
+  .bs-wizard > .bs-wizard-step .bs-wizard-info .fa {
+    font-size: 20px;
+    width: 25%;
+    margin: 10%;
+  }
+  #hi_check_label {
+    width: 48% !important
+  }
+  #ci_check_label {
+    width: 50% !important
+  }
+  #fi_check_label {
+    width: 48% !important
+  }
+  .form-control {
+    height: 50px;
+    font-size: 16px
+  }
+  #contact_via_1_label {
+    width: 100% !important
+  }
+  #contact_via_2_label {
+    width: 100% !important
+  }
+  #contact_via_3_label {
+    width: 100% !important
+  }
+  .radio-inline + .radio-inline {
+    margin-left: 0
+  }
+  .col-xs-2 {
+    width: 30%
+  }
+}
