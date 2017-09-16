@@ -16,6 +16,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'sprockets'
+gem 'mime-types'
+gem 'netrc'
+gem 'http-accept'
+gem 'http-cookie'
+gem 'rest-client'
 
 # SMTP
 gem 'sendgrid-ruby'

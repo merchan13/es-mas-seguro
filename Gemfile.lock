@@ -91,6 +91,7 @@ GEM
     formatador (0.2.5)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.8.6)
@@ -238,15 +239,20 @@ DEPENDENCIES
   figaro
   fog-aws
   font-awesome-sass
+  http-accept
+  http-cookie
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
   localized_country_select
+  mime-types
   mini_magick
+  netrc
   pg
   puma (~> 3.0)
   rails (~> 5.0.4)
   rails_12factor
+  rest-client
   sass-rails (~> 5.0)
   sendgrid-ruby
   simple_form
