@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   get 'contact',  to: 'pages#contact'
   get 'faq',      to: 'pages#faq'
 
-  get 'test',     to: 'pages#test'
+  #get 'test',     to: 'pages#test'
 
   resource :insurance_requests
   resource :complaints
 
-  resource :test
+  #resource :test
 
 end

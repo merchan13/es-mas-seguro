@@ -255,11 +255,19 @@
 
       var id = this.id;
 
-      var idToScroll = id.replace('link', '')
+      if (id == 'help') {
+        var idToScroll = 'masseguro-reclamos'
 
-			$('html, body').animate({
-				scrollTop: $('#'+idToScroll).offset().top - 125
-			}, 500, 'easeInOutExpo');
+        $('html, body').animate({
+  				scrollTop: $('#'+idToScroll).offset().top - 125
+  			}, 500, 'easeInOutExpo');
+      } else {
+        var idToScroll = id.replace('link', '')
+
+        $('html, body').animate({
+  				scrollTop: $('#'+idToScroll).offset().top - 125
+  			}, 500, 'easeInOutExpo');
+      }
 
 			return false;
 		});

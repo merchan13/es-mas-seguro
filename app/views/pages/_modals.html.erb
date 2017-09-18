@@ -149,6 +149,10 @@
           <%= button_tag(type: :submit, id:"contratar-button", class: "btn btn-primary") do %>
             Enviar
           <% end %>
+
+          <div class="col-md-2 col-md-offset-5">
+            <div id="spinner-request" class="loader" style="display: none;"></div>
+          </div>
         </div>
       <% end %>
     </div>
@@ -244,6 +248,10 @@
           <%= button_tag(type: :submit, id:"reclamar-button", class: "btn btn-primary") do %>
             Enviar
           <% end %>
+
+          <div class="col-md-2 col-md-offset-5">
+            <div id="spinner-complaint" class="loader" style="display: none;"></div>
+          </div>
         </div>
       <% end %>
     </div>

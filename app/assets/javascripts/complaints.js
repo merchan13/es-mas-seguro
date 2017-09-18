@@ -1,9 +1,31 @@
 var init_complaint_form;
 
+var hide_spinner_complaint = function(){
+  $('#spinner-complaint').hide();
+}
+
+var show_spinner_complaint = function(){
+  $('#spinner-complaint').show();
+}
+
 init_complaint_form = function() {
+  $('#new-complaint-form').on('ajax:before', function(event, data, status){
+    show_spinner_complaint();
+  });
+
+  $('#new-complaint-form').on('ajax:after', function(event, data, status){
+    hide_spinner_complaint();
+  });
+
   $('#new-complaint-form').on('ajax:success', function(event, data, status){
+    ga('set','page','/reclamosubmited.html');
+    ga('send', 'pageview');
+
+    hide_spinner_complaint();
+
     $('#complaintModal').modal('hide');
     $('#apologiesModal').modal('show');
+    
     $('#new-complaint-form').find('input:text').val('');
     $('#new-complaint-form').find('textarea').val('');
 

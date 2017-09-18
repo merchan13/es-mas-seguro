@@ -76,15 +76,15 @@ $("#reclamo-section").click(function(evt) {
   ga('send', 'pageview');
 });
 
-$("#contratar-button").click(function(evt) {
-  ga('set','page','/contratosubmited.html');
-  ga('send', 'pageview');
-});
+//$("#contratar-button").click(function(evt) {
+//  ga('set','page','/contratosubmited.html');
+//  ga('send', 'pageview');
+//});
 
-$("#reclamar-button").click(function(evt) {
-  ga('set','page','/reclamosubmited.html');
-  ga('send', 'pageview');
-});
+//$("#reclamar-button").click(function(evt) {
+//  ga('set','page','/reclamosubmited.html');
+//  ga('send', 'pageview');
+//});
 
 ///
 // WAYPOINTS

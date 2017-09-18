@@ -1,9 +1,31 @@
 var init_request_form;
 
+var hide_spinner_request = function(){
+  $('#spinner-request').hide();
+}
+
+var show_spinner_request = function(){
+  $('#spinner-request').show();
+}
+
 init_request_form = function() {
+  $('#new-request-form').on('ajax:before', function(event, data, status){
+    show_spinner_request();
+  });
+
+  $('#new-request-form').on('ajax:after', function(event, data, status){
+    hide_spinner_request();
+  });
+
   $('#new-request-form').on('ajax:success', function(event, data, status){
+    ga('set','page','/contratosubmited.html');
+    ga('send', 'pageview');
+
+    hide_spinner_request();
+
     $('#requestModal').modal('hide');
     $('#successModal').modal('show');
+    
     $('#new-request-form').find('input:text').val('');
     $('#new-request-form').find('textarea').val('');
     $('#new-request-form').find('input:checkbox').removeAttr('checked');
