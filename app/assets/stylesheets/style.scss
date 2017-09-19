@@ -1484,6 +1484,88 @@ abbr[title] {
     100% { transform: rotate(360deg); }
 }
 
+/*---- Rating ----*/
+.rating {
+  width: 180px;
+  padding: 30px 50px 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0px auto;
+  border-radius: 5px;
+}
+
+.gold {
+  //background: white;
+  height: 55px;
+  width: 295px;
+  white-space: nowrap;
+  margin-bottom: 45px;
+  //background-color: #fff;
+  padding: 0px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 55px;
+  //box-shadow: 0 1px 1px #cfcac4;
+}
+
+/*---- Star ----*/
+.star::before {
+  font-size: 40px;
+  font-family: FontAwesome;
+  content: "\f005";
+  padding: 0 7px;
+  text-shadow: 0px 0px 2px grey;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/*---- Star animations ----*/
+.gold .star:hover {
+  color: gold;
+  position: relative;
+}
+.star:hover {
+  color: #e91e1e;
+  position: relative;
+}
+
+.gold .star:hover ~ .star {
+    color: gold;
+}
+.star:hover ~ .star {
+  color: #e91e1e;
+}
+
+.gold .selected ~ .star,
+.gold .selected {
+  color: gold;
+}
+.selected ~ .star,
+.selected {
+  color: #e91e1e;
+}
+
+/*---- Star title ----*/
+.star:after {
+  position: absolute;
+  padding: 7px 15px;
+  left: -10%;
+  top: 115%;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: white;
+  white-space: nowrap;
+  z-index: 1000;
+  content: attr(t);
+  background: black;
+  line-height: 10px;
+}
+
+/*=========
+
+RESPONSIVE
+
+========== */
 @media screen and (max-width: 400px) {
   header .display-tc h1, .gtco-cover .display-tc h1 {
     font-size: 28px !important;

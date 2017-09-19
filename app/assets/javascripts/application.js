@@ -16,6 +16,12 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+$(function () {
+  if ($('#bot-content').length > 0){
+    $('#requestModal').modal('show');
+  }
+});
+
 function contactViaCheck(contactVia) {
     document.getElementById('contact_via_1_label').style.color = '#828282';
     document.getElementById('contact_via_2_label').style.color = '#828282';
@@ -30,6 +36,21 @@ function insuranceTypeCheck(type) {
   }
   else document.getElementById(type + '_check_label').style.color = '#828282';
 }
+
+$('.rating div').addClass('star');
+
+// When star is clicked
+$('.star').click(function(){
+  // if star doesn't have class selected
+  if (this+":not(.selected)"){
+    // selected star gets class
+    $('.star').removeClass('selected');
+    $(this).addClass('selected');
+
+    // selected star id
+    var starId = $(this).attr('s');
+    console.log('Selected star:'+starId);
+}});
 
 ///
 // CLICKS

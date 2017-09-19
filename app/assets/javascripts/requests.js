@@ -25,7 +25,7 @@ init_request_form = function() {
 
     $('#requestModal').modal('hide');
     $('#successModal').modal('show');
-    
+
     $('#new-request-form').find('input:text').val('');
     $('#new-request-form').find('textarea').val('');
     $('#new-request-form').find('input:checkbox').removeAttr('checked');
@@ -44,6 +44,11 @@ init_request_form = function() {
 
     $('#request-error').replaceWith(alert_html);
     $('#request-error-2').replaceWith(alert_html2);
+
+    if ($('#bot-content').length > 0){
+      window.location.replace("http://www.esmasseguro.com");
+    }
+
     init_request_form();
   });
 

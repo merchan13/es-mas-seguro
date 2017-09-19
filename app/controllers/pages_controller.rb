@@ -9,6 +9,10 @@ class PagesController < ApplicationController
   def faq
   end
 
+  def rating
+    # ... 
+  end
+
   def test
   end
 
