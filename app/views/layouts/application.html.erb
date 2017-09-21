@@ -180,10 +180,14 @@
   </head>
 
   <body>
-    
+
     <div id="page">
       <% if params[:controller] != 'bot_pages' %>
-        <%= render 'layouts/navigation' %>
+        <% if params[:action] == 'home' %>
+          <%= render 'layouts/navigation' %>
+        <% else %>
+          <%= render 'layouts/navigation_simple' %>
+        <% end %>
       <% end %>
 
       <%= yield %>
