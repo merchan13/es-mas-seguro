@@ -1494,7 +1494,7 @@ abbr[title] {
   border-radius: 5px;
 }
 
-.gold {
+.gold-rate {
   //background: white;
   height: 55px;
   width: 295px;
@@ -1520,8 +1520,8 @@ abbr[title] {
 }
 
 /*---- Star animations ----*/
-.gold .star:hover {
-  color: gold;
+.gold-rate .star:hover {
+  color: gold-rate;
   position: relative;
 }
 .star:hover {
@@ -1529,16 +1529,16 @@ abbr[title] {
   position: relative;
 }
 
-.gold .star:hover ~ .star {
-    color: gold;
+.gold-rate .star:hover ~ .star {
+    color: gold-rate;
 }
 .star:hover ~ .star {
   color: #e91e1e;
 }
 
-.gold .selected ~ .star,
-.gold .selected {
-  color: gold;
+.gold-rate .selected ~ .star,
+.gold-rate .selected {
+  color: gold-rate;
 }
 .selected ~ .star,
 .selected {
