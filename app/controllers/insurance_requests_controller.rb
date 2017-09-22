@@ -56,8 +56,12 @@ class InsuranceRequestsController < ApplicationController
                     "@api.mailgun.net/v3/esmasseguro.com/messages", admin_data
 
     if @client_response.code == 200 && @admin_response.code == 200
+
       puts @client_response
       puts @admin_response
+
+      InsuranceRequest.create(name: @name, insurance_type: @insurance_type, message: @message, contact_via: @contact_via, email: @email, phone: @phone, token: SecureRandom.uuid, token_expired: false)
+
     else
       render status: 400, nothing: true
     end

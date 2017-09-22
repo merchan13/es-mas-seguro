@@ -5,20 +5,102 @@
 			<div class="col-md-12 col-md-offset-0 text-center">
 				<div class="display-t">
 					<div class="display-tc animate-box" data-animate-effect="fadeIn">
-						<h3>¿Cómo fue tu experiencia con +Seguro?</h3>
+            <% if @content == 1 %>
+              <%= form_tag ('/tu_experiencia'), remote: true, id: 'new-rate-form' do %>
 
-            <div class="rating gold">
-               <div s="5" t="Excelente!"></div>
-               <div s="4" t="Buena!" ></div>
-               <div s="3" t="Normal"></div>
-               <div s="2" t="No quedé satisfecho"></div>
-               <div s="1" t="Terrible..."></div>
-            </div>
+                <%= hidden_field_tag :token , @request.token %>
 
-            <h3>¿Hay algo que nos quisieras comentar?</h3>
-            <div class="col-md-6 col-md-offset-3">
-              <textarea name="message" cols="20" rows="4" class="form-control" placeholder="Escribe tu mensaje por aquí" style="background-color:white"></textarea>
-            </div>
+                <!-- PUNTUACION -->
+                <div class="form-group row col-md-12" style="float:none">
+                  <div class="col-md-12">
+                    <h3>¿Cómo te sentiste con +Seguro?</h3>
+                    <!-- 1 -->
+                    <label class="radio-inline" id="contact_via_1_label" style="width: 20%; background:#ff6f69; height:100px; border-radius:5%;  padding:0">
+                      <input  type="radio"
+                              name="rate_calification"
+                              id="rate_1"
+                              value="1"
+                              onclick="javascript:calificationCheck('1');"
+                              style="margin:0; position:relative"
+                              required>
+                      <h4 style="margin-top:5%">Muy insatisfecho</h4>
+                    </label>
+
+                    <!-- 2 -->
+                    <label class="radio-inline" id="contact_via_2_label" style="width: 20%; background:#ffcc5c; height:100px; border-radius:5%;  padding:0">
+                      <input  type="radio"
+                              name="rate_calification"
+                              id="rate_2"
+                              value="2"
+                              onclick="javascript:calificationCheck('2');"
+                              style="margin:0; position:relative">
+                      <h4 style="margin-top:5%">Insatisfecho</h4>
+                    </label>
+
+                    <!-- 3 -->
+                    <label class="radio-inline" id="contact_via_3_label" style="width: 15%; background:#ffeead; height:100px; border-radius:5%;  padding:0">
+                      <input  type="radio"
+                              name="rate_calification"
+                              id="rate_3"
+                              value="3"
+                              onclick="javascript:calificationCheck('3');"
+                              style="margin:0; position:relative">
+                      <h4 style="margin-top:5%">Normal</h4>
+                    </label>
+
+                    <!-- 4 -->
+                    <label class="radio-inline" id="contact_via_2_label" style="width: 18%; background:	#88d8b0; height:100px; border-radius:5%;  padding:0">
+                      <input  type="radio"
+                              name="rate_calification"
+                              id="rate_4"
+                              value="4"
+                              onclick="javascript:calificationCheck('2');"
+                              style="margin:0; position:relative">
+                      <h4 style="margin-top:5%">Satisfecho</h4>
+                    </label>
+
+                    <!-- 5 -->
+                    <label class="radio-inline" id="contact_via_3_label" style="width: 20%; background:#74d600; height:100px; border-radius:5%;  padding:0">
+                      <input  type="radio"
+                              name="rate_calification"
+                              id="rate_5"
+                              value="5"
+                              onclick="javascript:calificationCheck('3');"
+                              style="margin:0; position:relative">
+                      <h4 style="margin-top:5%">Muy satisfecho</h4>
+                    </label>
+                  </div>
+                </div><!-- PUNTUACION -->
+                <br>
+
+                <!-- MENSAJE -->
+                <div class="form-group row col-md-12" style="float:none">
+                  <div class="col-md-8 col-md-offset-2">
+                    <h3>¿Hay algo que nos quisieras comentar?</h3>
+                    <textarea name="message" cols="30" rows="3" class="form-control" placeholder="Escribe tu mensaje por aquí" style="background-color:#fdfdfd"></textarea>
+                  </div>
+                </div><!-- MENSAJE -->
+                <br>
+
+                <div class="col-md-12">
+                  <%= button_tag(type: :submit, id:"calificar-button", class: "btn btn-primary") do %>
+                    Enviar
+                  <% end %>
+                </div>
+                <div class="col-md-2 col-md-offset-5">
+                  <div id="spinner-rate" class="loader" style="display: none; margin: 0 auto"></div>
+                </div>
+
+              <% end %>
+
+            <% else %>
+              <h1>¡Gracias <%= @request.name %>!</h1>
+              <h2>Tu opinión significa mucho para nosotros</h2>
+              <p>
+                <%= link_to 'Ir a +Seguro', root_path, class: 'btn btn-primary btn-lg' %>
+              </p>
+            <% end %>
+
 
 					</div>
 				</div>

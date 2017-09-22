@@ -1,14 +1,21 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  get 'acerca-de-nosotros',       to: 'pages#about'
+  # Sobre nosotros
+  get 'acerca_de_nosotros',       to: 'pages#about'
   get 'faq',                      to: 'pages#faq'
-  get 'tu-experiencia',           to: 'pages#rating'
   get 'terminos_y_condiciones',   to: 'pages#terms'
 
+  # Tu experiencia
+  get   'tu_experiencia/:token',    to: 'pages#rating'
+  post  'tu_experiencia/',    to: 'pages#save_rating'
+  get   'tu_experiencia',           to: 'pages#home'
+
+  # Bot
   get 'solicitud-bot',  to: 'bot_pages#bot_request'
   get 'reclamo-bot',    to: 'bot_pages#bot_complaint'
 
+  # Solicitudes
   resource :insurance_requests
   resource :complaints
 

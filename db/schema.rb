@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170813224639) do
+ActiveRecord::Schema.define(version: 20170922043131) do
 
   create_table "complaints", force: :cascade do |t|
     t.string   "policy_number", null: false
@@ -31,6 +31,19 @@ ActiveRecord::Schema.define(version: 20170813224639) do
     t.string   "contact_via",    null: false
     t.string   "email",          null: false
     t.string   "phone",          null: false
+    t.string   "token"
+    t.boolean  "token_expired"
+    t.integer  "rating_id"
+    t.index ["rating_id"], name: "index_insurance_requests_on_rating_id"
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.string   "calification",         null: false
+    t.string   "message"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "insurance_request_id"
+    t.index ["insurance_request_id"], name: "index_ratings_on_insurance_request_id"
   end
 
 end
