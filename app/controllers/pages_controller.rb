@@ -42,7 +42,7 @@ class PagesController < ApplicationController
 
         @request.save
 
-        render status: 200, nothing: true
+        redirect_to controller: 'pages', action: 'rating', token: @request.token
       else
         render status: 400, nothing: true
       end
