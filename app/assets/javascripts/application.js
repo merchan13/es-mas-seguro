@@ -37,75 +37,53 @@ function insuranceTypeCheck(type) {
   else document.getElementById(type + '_check_label').style.color = '#828282';
 }
 
-$('.rating div').addClass('star');
-
-// When star is clicked
-$('.star').click(function(){
-  // if star doesn't have class selected
-  if (this+":not(.selected)"){
-    // selected star gets class
-    $('.star').removeClass('selected');
-    $(this).addClass('selected');
-
-    // selected star id
-    var starId = $(this).attr('s');
-    console.log('Selected star:'+starId);
-}});
-
 ///
 // CLICKS
 ///
 $("#help").click(function(evt) {
-  //alert('necesitoayuda');
   ga('set','page','/necesitoayuda.html');
   ga('send', 'pageview');
 });
 
 $("#asegurate-nav").click(function(evt) {
-  //alert('asegurate-nav');
   ga('set','page','/asegurateform.html');
   ga('send', 'pageview');
 });
 
 $("#asegurate-header").click(function(evt) {
-  //alert('asegurate-header');
   ga('set','page','/asegurateform.html');
   ga('send', 'pageview');
 });
 
 $("#asegurate-steps").click(function(evt) {
-  //alert('asegurate-steps');
+  ga('set','page','/asegurateform.html');
+  ga('send', 'pageview');
+});
+
+$("#asegurate-waywf").click(function(evt) {
   ga('set','page','/asegurateform.html');
   ga('send', 'pageview');
 });
 
 $("#reclamo-nav").click(function(evt) {
-  //alert('reclamo-nav');
   ga('set','page','/reclamoform.html');
   ga('send', 'pageview');
 });
 
 $("#reclamo-header").click(function(evt) {
-  //alert('reclamo-header');
   ga('set','page','/reclamoform.html');
   ga('send', 'pageview');
 });
 
 $("#reclamo-section").click(function(evt) {
-  //alert('reclamo-section');
   ga('set','page','/reclamoform.html');
   ga('send', 'pageview');
 });
 
-//$("#contratar-button").click(function(evt) {
-//  ga('set','page','/contratosubmited.html');
-//  ga('send', 'pageview');
-//});
-
-//$("#reclamar-button").click(function(evt) {
-//  ga('set','page','/reclamosubmited.html');
-//  ga('send', 'pageview');
-//});
+$("#reclamo-waywf").click(function(evt) {
+  ga('set','page','/reclamoform.html');
+  ga('send', 'pageview');
+});
 
 ///
 // WAYPOINTS
@@ -113,7 +91,6 @@ $("#reclamo-section").click(function(evt) {
 var header_waypoint = new Waypoint({
   element: document.getElementById('gtco-header'),
   handler: function(direction) {
-    //alert('seccion header')
     ga('set','page','/header.html');
     ga('send', 'pageview');
   }
@@ -122,7 +99,6 @@ var header_waypoint = new Waypoint({
 var steps_waypoint = new Waypoint({
   element: document.getElementById('masseguro-steps'),
   handler: function(direction) {
-    //alert('seccion steps')
     ga('set','page','/steps.html');
     ga('send', 'pageview');
   },
@@ -132,7 +108,6 @@ var steps_waypoint = new Waypoint({
 var why_waypoint = new Waypoint({
   element: document.getElementById('masseguro-why'),
   handler: function(direction) {
-    //alert('seccion why')
     ga('set','page','/why.html');
     ga('send', 'pageview');
   },
@@ -142,7 +117,6 @@ var why_waypoint = new Waypoint({
 var reclamos_waypoint = new Waypoint({
   element: document.getElementById('masseguro-reclamos'),
   handler: function(direction) {
-    //alert('seccion reclamos')
     ga('set','page','/reclamos.html');
     ga('send', 'pageview');
   },
@@ -152,7 +126,6 @@ var reclamos_waypoint = new Waypoint({
 var app_waypoint = new Waypoint({
   element: document.getElementById('masseguro-app'),
   handler: function(direction) {
-    //alert('seccion app')
     ga('set','page','/app.html');
     ga('send', 'pageview');
   },
@@ -162,7 +135,6 @@ var app_waypoint = new Waypoint({
 var seguros_waypoint = new Waypoint({
   element: document.getElementById('masseguro-seguros'),
   handler: function(direction) {
-    //alert('seccion seguros')
     ga('set','page','/aseguradoras.html');
     ga('send', 'pageview');
   },

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   # Sobre nosotros
-  get 'acerca_de_nosotros',       to: 'pages#about'
+  get 'nosotros',       to: 'pages#about'
   get 'faq',                      to: 'pages#faq'
   get 'terminos_y_condiciones',   to: 'pages#terms'
 
