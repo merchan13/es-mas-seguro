@@ -25,7 +25,7 @@ init_complaint_form = function() {
 
     $('#complaintModal').modal('hide');
     $('#apologiesModal').modal('show');
-    
+
     $('#new-complaint-form').find('input:text').val('');
     $('#new-complaint-form').find('textarea').val('');
 
@@ -34,6 +34,11 @@ init_complaint_form = function() {
 
     $('#complaint-error').replaceWith(alert_html);
     $('#complaint-error-2').replaceWith(alert_html2);
+
+    if ($('#bot-content-complaint').length > 0){
+      window.location.replace("http://www.esmasseguro.com");
+    }
+
     init_complaint_form();
   });
 

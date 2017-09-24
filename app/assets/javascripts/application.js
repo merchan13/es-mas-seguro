@@ -17,8 +17,13 @@
 //= require_tree .
 
 $(function () {
-  if ($('#bot-content').length > 0){
+  if ($('#bot-content-request').length > 0)
+  {
     $('#requestModal').modal('show');
+  }
+  else if ($('#bot-content-complaint').length > 0)
+  {
+    $('#complaintModal').modal('show');
   }
 });
 

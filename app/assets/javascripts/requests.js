@@ -45,7 +45,7 @@ init_request_form = function() {
     $('#request-error').replaceWith(alert_html);
     $('#request-error-2').replaceWith(alert_html2);
 
-    if ($('#bot-content').length > 0){
+    if ($('#bot-content-request').length > 0){
       window.location.replace("http://www.esmasseguro.com");
     }
 
