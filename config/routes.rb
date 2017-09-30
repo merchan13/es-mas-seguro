@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-
-  get '', to: 'dashboard#login', constraints: { subdomain: 'dashboard' }
-
   root 'pages#home'
 
   # Sobre nosotros
