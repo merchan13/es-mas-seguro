@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
 
-  get '', to: 'dashboards#login', constraints: { subdomain: 'dashboard' }
-
   root 'pages#home'
 
   # Sobre nosotros
-  get 'nosotros',       to: 'pages#about'
+  get 'nosotros',                 to: 'pages#about'
   get 'faq',                      to: 'pages#faq'
   get 'terminos_y_condiciones',   to: 'pages#terms'
 
   # Tu experiencia
   get   'tu_experiencia/:token',    to: 'pages#rating'
-  post  'tu_experiencia/',    to: 'pages#save_rating'
+  post  'tu_experiencia/',          to: 'pages#save_rating'
   get   'tu_experiencia',           to: 'pages#home'
 
   # Bot
