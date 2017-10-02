@@ -40,6 +40,11 @@ gem 'fog-aws'
 gem 'figaro'
 gem 'cloudinary'
 
+# Users
+gem 'bcrypt'
+gem 'devise'
+gem 'devise-i18n'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
