@@ -53,9 +53,11 @@ init_request_form = function() {
   });
 
   $('#new-request-form').on('ajax:error', function(event, xhr, status, error){
+    hide_spinner_request();
+
     if (error == 'Bad Request'){
-      alert_html = '<div id="request-error" class="alert alert-danger col-md-12" style="float:none; text-align:center; font-size:14px;"><strong>¡Oh no!</strong><br>Ocurrió un error, por favor verifique que introdujo todos los datos requeridos.</div>';
-      alert_html2 = '<div id="request-error-2" class="alert alert-danger col-md-12" style="float:none; text-align:center; font-size:14px;"><strong>¡Oh no!</strong><br>Ocurrió un error, por favor verifique que introdujo todos los datos requeridos.</div>';
+      alert_html = '<div id="request-error" class="alert alert-danger col-md-12" style="float:none; text-align:center; font-size:14px;"><strong>¡Oh no!</strong><br>Por favor no olvides decirnos que seguro necesitas</div>';
+      alert_html2 = '<div id="request-error-2" class="alert alert-danger col-md-12" style="float:none; text-align:center; font-size:14px;"><strong>¡Oh no!</strong><br>Por favor no olvides decirnos que seguro necesitas</div>';
 
       $('#request-error').replaceWith(alert_html);
       $('#request-error-2').replaceWith(alert_html2);
