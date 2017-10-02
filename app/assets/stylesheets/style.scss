@@ -846,7 +846,7 @@ form label {
   position: absolute;
   z-index: 1901;
   width: 270px;
-  background: black;
+  background: white;
   top: 0;
   right: 0;
   top: 0;
@@ -869,19 +869,14 @@ form label {
   -o-transform: translateX(0px);
   transform: translateX(0px);
 }
-#gtco-offcanvas a {
-  color: rgba(255, 255, 255, 0.5);
-}
-#gtco-offcanvas a:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
+
 #gtco-offcanvas ul {
   padding: 0;
   margin: 0;
 }
 #gtco-offcanvas ul li {
   padding: 0;
-  margin: 0;
+  margin-bottom: 10%;
   list-style: none;
 }
 #gtco-offcanvas ul li > ul {
@@ -1000,11 +995,11 @@ form label {
   transition: all .2s ease-out;
 }
 .gtco-nav-toggle.gtco-nav-white > i {
-  color: #fff;
-  background: #fff;
+  color: #F85A16;
+  background: #F85A16;
 }
 .gtco-nav-toggle.gtco-nav-white > i::before, .gtco-nav-toggle.gtco-nav-white > i::after {
-  background: #fff;
+  background: #F85A16;
 }
 
 .gtco-nav-toggle i::before {
@@ -1046,7 +1041,7 @@ form label {
 }
 
 .gtco-nav-toggle {
-  position: absolute;
+  position: fixed;
   right: 0px;
   top: 10px;
   z-index: 21;
@@ -1486,6 +1481,14 @@ abbr[title] {
 
 .out-of-spa {
   padding: 8em 0 1em 0;
+}
+
+.modal {
+  z-index: 9999;
+}
+
+#gtco-offcanvas > ul > a {
+  display: none;
 }
 
 /*=========
