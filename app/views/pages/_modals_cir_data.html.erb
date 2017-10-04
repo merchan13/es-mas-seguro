@@ -1,0 +1,71 @@
+<!-- INFO SEGURO AUTO -->
+<div class="form-group row col-md-12" id="cir_data_form" style="float:none; display:none;">
+
+  <!-- PREGUNTA -->
+  <div class="form-group row col-md-12" style="float:none">
+    <div class="col-md-12">
+      <h3 style="color:#F85A16; text-align:center">¡Vimos que necesitas un seguro de Automóvil!</h3>
+      <p>Para adelantar el proceso, ¿Puedes decirnos algunos datos de tu automóvil?</p>
+    </div>
+  </div><!-- PREGUNTA -->
+
+  <!-- MARCA -->
+  <div class="form-group row col-md-12" style="float:none">
+    <div class="col-md-10">
+      <h4>Marca de tu Auto</h4>
+      <input  type="text"
+              id="cir_brand"
+              name="brand"
+              class="form-control"
+              placeholder="Marca del automóvil"
+              pattern="^[a-zA-Záäéëíïóöúüñ .()0-9-]+$"
+              onchange="javascript:validateTextField(this)"
+              title="Debe introducir un nombre válido">
+    </div>
+  </div><!-- MARCA -->
+
+  <!-- MODELO -->
+  <div class="form-group row col-md-12" style="float:none">
+    <div class="col-md-10">
+      <h4>Modelo</h4>
+      <input  type="text"
+              id="cir_model"
+              name="model"
+              class="form-control"
+              placeholder="Modelo del automóvil"
+              pattern="^[a-zA-Záäéëíïóöúüñ .()0-9-]+$"
+              onchange="javascript:validateTextField(this)"
+              title="Debe introducir un nombre válido">
+    </div>
+  </div><!-- MODELO -->
+
+  <!-- AÑO -->
+  <div class="form-group row col-md-12" style="float:none">
+    <div class="col-md-6">
+      <h4>Año de fabricación</h4>
+      <input type="number"
+             id="cir_year"
+             name="year"
+             placeholder="1930 hasta 2018"
+             value=""
+             class="form-control"
+             onchange="javascript:validateTextField(this)">
+    </div>
+  </div><!-- AÑO -->
+
+  <!-- PRECIO ESTIMADO -->
+  <div class="form-group row col-md-12" style="float:none">
+    <div class="col-md-6">
+      <h4>Precio estimado ($)</h4>
+      <input type="number"
+             id="cir_price"
+             name="price"
+             placeholder="Precio en dólares"
+             value=""
+             class="form-control"
+             onchange="javascript:validateTextField(this)">
+    </div>
+  </div><!-- PRECIO ESTIMADO -->
+
+</div><!-- INFO SEGURO AUTO -->
+<br>

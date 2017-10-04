@@ -27,6 +27,41 @@ $(function () {
   }
 });
 
+function blockCharacters(input){
+  var stripped = input.value.replace(/[^a-zA-Záäéëíïóöúüñ /,.:;(-=)0-9!¡$%*\"¿+?<>\s]+/gi, '');
+  input.value = stripped;
+}
+
+function validateTextArea(textArea){
+    var regex = new RegExp("^[a-zA-Záäéëíïóöúüñ \/,.:;(\-\=)0-9!¡$%*\"¿\+?<>]+");
+
+    var match = regex.test(textArea.value);
+
+    if (match == false && textArea.value != "") {
+      textArea.style.borderColor = "red";
+    }
+    else if (match == false && textArea.value == "") {
+      textArea.style.borderColor = "#ccc";
+    }
+    else {
+      textArea.style.borderColor = "#00e500"
+    }
+}
+
+function validateTextField(textField){
+    var valid = textField.checkValidity();
+
+    if (valid == false && textField.value != "") {
+      textField.style.borderColor = "red";
+    }
+    else if (textField.value == "") {
+      textField.style.borderColor = "";
+    }
+    else {
+      textField.style.borderColor = "#00e500"
+    }
+}
+
 function contactViaCheck(contactVia) {
     document.getElementById('contact_via_1_label').style.color = '#828282';
     document.getElementById('contact_via_2_label').style.color = '#828282';
@@ -40,6 +75,21 @@ function insuranceTypeCheck(type) {
     document.getElementById(type + '_check_label').style.color = '#F85A16';
   }
   else document.getElementById(type + '_check_label').style.color = '#828282';
+
+  if (document.getElementById('ci_check').checked) {
+    document.getElementById('cir_data_form').style.display = 'block';
+    $('#cir_brand').attr("required", true);
+    $('#cir_model').attr("required", true);
+    $('#cir_year').attr("required", true);
+    $('#cir_price').attr("required", true);
+  }
+  else {
+    document.getElementById('cir_data_form').style.display = 'none';
+    $('#cir_brand').removeAttr("required");
+    $('#cir_model').removeAttr("required");
+    $('#cir_year').removeAttr("required");
+    $('#cir_price').removeAttr("required");
+  }
 }
 
 ///

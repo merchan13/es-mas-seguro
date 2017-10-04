@@ -1455,6 +1455,35 @@
                 </div>
               </div>
 
+              <% if insurance_type.include? "Auto" %>
+                <div class="column">
+                    <div class="column__padding--inline">
+                        <p class="size-20" style="font-family: avenir,sans-serif; font-size: 18px; line-height: 26px;" lang="x-size-20"><span class="font-avenir"><span style="color:#f85a16"><strong>Datos del Automóvil</strong></span></span></p>
+                    </div>
+
+                    <div class="column__padding--inline">
+                        <p class="size-14" style="font-family: avenir,sans-serif; font-size: 16px; line-height: 21px;" lang="x-size-14">
+                            Marca: <span class="font-avenir"><%= cir_brand %></span>
+                        </p>
+                    </div>
+                    <div class="column__padding--inline">
+                        <p class="size-14" style="font-family: avenir,sans-serif; font-size: 16px; line-height: 21px;" lang="x-size-14">
+                            Modelo: <span class="font-avenir"><%= cir_model %></span>
+                        </p>
+                    </div>
+                    <div class="column__padding--inline">
+                        <p class="size-14" style="font-family: avenir,sans-serif; font-size: 16px; line-height: 21px;" lang="x-size-14">
+                            Año: <span class="font-avenir"><%= cir_year %></span>
+                        </p>
+                    </div>
+                    <div class="column__padding--inline">
+                        <p class="size-14" style="font-family: avenir,sans-serif; font-size: 16px; line-height: 21px;" lang="x-size-14">
+                            Precio estimado: <span class="font-avenir">$<%= cir_price %></span>
+                        </p>
+                    </div>
+                </div>
+              <% end %>
+
               <% if !message.nil? %>
                 <!--[if (mso)|(IE)]></td><td style="width: 200px" valign="top" class="w160"><![endif]-->
                 <div class="column">

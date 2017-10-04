@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170930205552) do
+ActiveRecord::Schema.define(version: 20171004033901) do
 
   create_table "complaints", force: :cascade do |t|
     t.string   "policy_number", null: false
@@ -34,6 +34,10 @@ ActiveRecord::Schema.define(version: 20170930205552) do
     t.string   "token"
     t.boolean  "token_expired"
     t.integer  "rating_id"
+    t.string   "cir_brand"
+    t.string   "cir_model"
+    t.string   "cir_year"
+    t.string   "cir_price"
     t.index ["rating_id"], name: "index_insurance_requests_on_rating_id"
   end
 

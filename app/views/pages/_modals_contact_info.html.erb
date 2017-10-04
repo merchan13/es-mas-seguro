@@ -1,0 +1,83 @@
+<!-- CONTACTO -->
+<div class="form-group row col-md-12" style="float:none">
+  <!-- NOMBRE -->
+  <div class="form-group row col-md-12" style="float:none">
+		<div class="col-md-10">
+			<h4>Vamos a necesitar tu nombre...</h4>
+      <input  type="text"
+              name="name"
+              class="form-control"
+              placeholder="Hola mi nombre es..."
+              pattern="^[a-zA-Z ,.'-]{2,}$"
+              title="Debe introducir un nombre válido"
+              onchange="javascript:validateTextField(this)"
+              required>
+		</div>
+	</div><!-- NOMBRE -->
+  <br>
+
+  <!-- CORREO -->
+  <div class="form-group row col-md-12" style="float:none">
+		<div class="col-md-10">
+			<h4>Tu correo electrónico...</h4>
+      <input  type="text"
+              name="email"
+              class="form-control"
+              placeholder="esmasseguro@ejemplo.com"
+              pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,3}$"
+              title="Debe introducir un correo válido"
+              onchange="javascript:validateTextField(this)"
+              required>
+		</div>
+	</div><!-- CORREO -->
+  <br>
+
+  <!-- NUMERO TELF -->
+  <div class="form-group row col-md-12" style="float:none">
+		<div class="col-md-10">
+			<h4>Y tu número telefónico</h4>
+      <input   type="text"
+              name="phone"
+              class="form-control"
+              placeholder="+507 5555 5555"
+              pattern='^\+?\d{8,13}$'
+              title="Debe introducir un teléfono válido, sin espacios o caracteres especiales (sólo se acepta el + al comienzo del número)"
+              onchange="javascript:validateTextField(this)"
+              required>
+		</div>
+	</div><!-- NUMERO TELF -->
+  <br>
+
+  <!-- COMO TE GUSTARIA SER CONTACTADO -->
+	<div class="col-md-12">
+		<h4>¿Cómo te gustaría ser contactado?</h4>
+    <!-- Llamada -->
+    <label class="radio-inline" id="contact_via_1_label" style="width: 44%;">
+      <input  type="radio"
+              name="contact_via_check"
+              id="via_1"
+              value="llamada telefónica"
+              onclick="javascript:contactViaCheck('1');"
+              required> Llamada a mi teléfono
+    </label>
+
+    <!-- WhatsApp -->
+    <label class="radio-inline" id="contact_via_2_label" style="width: 25%;">
+      <input  type="radio"
+              name="contact_via_check"
+              id="via_2"
+              value="WhatsApp"
+              onclick="javascript:contactViaCheck('2');"> WhatsApp
+    </label>
+
+    <!-- Email -->
+    <label class="radio-inline" id="contact_via_3_label" style="width: 25%;">
+      <input  type="radio"
+              name="contact_via_check"
+              id="via_3"
+              value="email"
+              onclick="javascript:contactViaCheck('3');"> Email
+    </label>
+	</div><!-- COMO TE GUSTARIA SER CONTACTADO -->
+</div><!-- CONTACTO -->
+<br>

@@ -27,7 +27,11 @@ init_request_form = function() {
     $('#successModal').modal('show');
 
     $('#new-request-form').find('input:text').val('');
+    $('#new-request-form').find('input:number').val('');
+    $('#new-request-form').find('input').val('');
     $('#new-request-form').find('textarea').val('');
+    $('#new-request-form').find('input').css('border-color', '#ccc');
+    $('#new-request-form').find('textarea').css('border-color', '#ccc');
     $('#new-request-form').find('input:checkbox').removeAttr('checked');
     $('#new-request-form').find('input:radio').removeAttr('checked');
 
