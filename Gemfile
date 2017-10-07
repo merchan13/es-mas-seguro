@@ -22,6 +22,7 @@ gem 'http-accept'
 gem 'http-cookie'
 gem 'rest-client'
 gem 'seed_dump'
+gem 'bootstrap-datepicker-rails'
 
 # SMTP
 gem 'sendgrid-ruby'

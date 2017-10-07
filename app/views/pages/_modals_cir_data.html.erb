@@ -4,10 +4,25 @@
   <!-- PREGUNTA -->
   <div class="form-group row col-md-12" style="float:none">
     <div class="col-md-12">
-      <h3 style="color:#F85A16; text-align:center">¡Vimos que necesitas un seguro de Automóvil!</h3>
-      <p>Para adelantar el proceso, ¿Puedes decirnos algunos datos de tu automóvil?</p>
+      <h3 style="color:#F85A16; text-align:center">Datos del Automóvil</h3>
+      <p>Para adelantar el proceso, ¿Puedes decirnos algunos datos?</p>
     </div>
   </div><!-- PREGUNTA -->
+
+  <!-- CEDULA -->
+  <div class="form-group row col-md-12" style="float:none">
+    <div class="col-md-10">
+      <h4>Cédula</h4>
+      <input  type="text"
+              id="cir_document"
+              name="cir_document"
+              class="form-control"
+              placeholder="Cédula o documento de identificación"
+              pattern="^[a-zA-Záäéëíïóöúüñ .()0-9-]+$"
+              onchange="javascript:validateTextField(this)"
+              title="">
+    </div>
+  </div><!-- CEDULA -->
 
   <!-- MARCA -->
   <div class="form-group row col-md-12" style="float:none">
@@ -15,7 +30,7 @@
       <h4>Marca de tu Auto</h4>
       <input  type="text"
               id="cir_brand"
-              name="brand"
+              name="cir_brand"
               class="form-control"
               placeholder="Marca del automóvil"
               pattern="^[a-zA-Záäéëíïóöúüñ .()0-9-]+$"
@@ -30,7 +45,7 @@
       <h4>Modelo</h4>
       <input  type="text"
               id="cir_model"
-              name="model"
+              name="cir_model"
               class="form-control"
               placeholder="Modelo del automóvil"
               pattern="^[a-zA-Záäéëíïóöúüñ .()0-9-]+$"
@@ -45,7 +60,7 @@
       <h4>Año de fabricación</h4>
       <input type="number"
              id="cir_year"
-             name="year"
+             name="cir_year"
              placeholder="1930 hasta 2018"
              value=""
              class="form-control"
@@ -59,7 +74,7 @@
       <h4>Valor del automóvil ($)</h4>
       <input type="number"
              id="cir_price"
-             name="price"
+             name="cir_price"
              placeholder="Precio en dólares"
              value=""
              class="form-control"

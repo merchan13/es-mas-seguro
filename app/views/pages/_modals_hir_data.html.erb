@@ -1,0 +1,78 @@
+<!-- INFO SEGURO SALUD -->
+<div class="form-group row col-md-12" id="hir_data_form" style="float:none; display:none;">
+
+  <!-- PREGUNTA -->
+  <div class="form-group row col-md-12" style="float:none">
+    <div class="col-md-12">
+      <h3 style="color:#F85A16; text-align:center">Datos para el seguro de Salud</h3>
+      <p>Para adelantar el proceso, ¿Puedes decirnos algunos datos?</p>
+    </div>
+  </div><!-- PREGUNTA -->
+
+  <!-- LOCAL O INTERNACIONAL -->
+  <div class="form-group row col-md-12" style="float:none">
+    <div class="col-md-10">
+      <h4>¿Desea una cobertura local o internacional?</h4>
+      <!-- Local -->
+      <label class="radio-inline" id="hir_type_1_label" style="width: 35%;">
+        <input  type="radio"
+                name="hir_type_check"
+                id="hir_type_1"
+                value="local"
+                onclick="javascript:hirTypeCheck('1');"> Local
+      </label>
+
+      <!-- Internacional -->
+      <label class="radio-inline" id="hir_type_2_label" style="width: 35%;">
+        <input  type="radio"
+                name="hir_type_check"
+                id="hir_type_2"
+                value="internacional"
+                onclick="javascript:hirTypeCheck('2');"> Internacional
+      </label>
+    </div>
+  </div><!-- LOCAL O INTERNACIONAL -->
+
+  <!-- INDIVIDUAL O FAMILIAR -->
+  <div class="form-group row col-md-12" style="float:none">
+    <div class="col-md-10">
+      <h4>¿Cobertura individual o familiar?</h4>
+      <!-- Individual -->
+      <label class="radio-inline" id="hir_cover_1_label" style="width: 35%;">
+        <input  type="radio"
+                name="hir_cover_check"
+                id="hir_cover_1"
+                value="individual"
+                onclick="javascript:hirCoverCheck('1');"> Individual
+      </label>
+
+      <!-- Familiar -->
+      <label class="radio-inline" id="hir_cover_2_label" style="width: 35%;">
+        <input  type="radio"
+                name="hir_cover_check"
+                id="hir_cover_2"
+                value="familiar"
+                onclick="javascript:hirCoverCheck('2');"> Familiar
+      </label>
+    </div>
+  </div><!-- INDIVIDUAL O FAMILIAR -->
+
+  <!-- DEPENDIENTES -->
+  <div class="form-group row col-md-12" id="hir_dependents_text_area" style="float:none; display:none">
+    <div class="col-md-10">
+      <h4>Nombres de los dependientes y sus edades</h4>
+      <textarea name="hir_dependents"
+                id="hir_dependents"
+                cols="30"
+                rows="3"
+                class="form-control"
+                placeholder="John Doe - 33 años"
+                onkeydown="javascript:blockCharacters(this)"
+                onkeypress="javascript:blockCharacters(this)"
+                onkeyup="javascript:blockCharacters(this)"
+                onblur="javascript:validateTextArea(this)"></textarea>
+    </div>
+  </div><!-- DEPENDIENTES -->
+
+</div><!-- INFO SEGURO SALUD -->
+<br>

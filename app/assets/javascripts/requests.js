@@ -23,11 +23,6 @@ init_request_form = function() {
 
     hide_spinner_request();
 
-    $('#requestModal').modal('hide');
-    $('#successModal').modal('show');
-
-    $('#new-request-form').find('input:text').val('');
-    $('#new-request-form').find('input:number').val('');
     $('#new-request-form').find('input').val('');
     $('#new-request-form').find('textarea').val('');
     $('#new-request-form').find('input').css('border-color', '#ccc');
@@ -42,6 +37,16 @@ init_request_form = function() {
     document.getElementById('ci_check_label').style.color = '#828282';
     document.getElementById('fi_check_label').style.color = '#828282';
     document.getElementById('li_check_label').style.color = '#828282';
+    document.getElementById('hir_type_1_label').style.color = '#828282';
+    document.getElementById('hir_type_2_label').style.color = '#828282';
+    document.getElementById('hir_cover_1_label').style.color = '#828282';
+    document.getElementById('hir_cover_2_label').style.color = '#828282';
+
+    document.getElementById('cir_data_form').style.display = 'none';
+    document.getElementById('hir_data_form').style.display = 'none';
+
+    $('#requestModal').modal('hide');
+    $('#successModal').modal('show');
 
     var alert_html = '<div id="request-error"></div>';
     var alert_html2 = '<div id="request-error-2"></div>';

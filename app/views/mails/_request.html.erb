@@ -1439,7 +1439,10 @@
                       <p class="size-20" style="font-family: avenir,sans-serif; font-size: 18px; line-height: 26px;" lang="x-size-20"><span class="font-avenir"><span style="color:#f85a16"><strong>Datos del cliente</strong></span></span></p>
                   </div>
                   <div class="column__padding--inline">
-                    <p class="size-14" style="font-family: avenir,sans-serif; font-size: 16px; line-height: 21px;" lang="x-size-14"><span class="font-avenir"><strong>Nombre:</strong> <%= name%></span></p>
+                    <p class="size-14" style="font-family: avenir,sans-serif; font-size: 16px; line-height: 21px;" lang="x-size-14"><span class="font-avenir"><strong>Nombre:</strong> <%= name %></span></p>
+                  </div>
+                  <div class="column__padding--inline">
+                    <p class="size-14" style="font-family: avenir,sans-serif; font-size: 16px; line-height: 21px;" lang="x-size-14"><span class="font-avenir"><strong>Fecha de Nacimiento:</strong> <%= birthday %></span></p>
                   </div>
                   <div class="column__padding--inline">
                     <p class="size-14" style="font-family: avenir,sans-serif; font-size: 16px; line-height: 21px;" lang="x-size-14"><span class="font-avenir"><strong>Contacto:</strong> <%= "#{email} / #{phone} (El cliente desea ser contactado vía #{contact_via})" %></span></p>
@@ -1481,6 +1484,27 @@
                             Valor del vehículo: <span class="font-avenir">$<%= cir_price %></span>
                         </p>
                     </div>
+                </div>
+              <% end %>
+
+              <% if insurance_type.include? "Salud" %>
+                <div class="column">
+                    <div class="column__padding--inline">
+                        <p class="size-20" style="font-family: avenir,sans-serif; font-size: 18px; line-height: 26px;" lang="x-size-20"><span class="font-avenir"><span style="color:#f85a16"><strong>Datos sobre el seguro de Salud</strong></span></span></p>
+                    </div>
+
+                    <div class="column__padding--inline">
+                        <p class="size-14" style="font-family: avenir,sans-serif; font-size: 16px; line-height: 21px;" lang="x-size-14">
+                            Tipo de cobertura: <span class="font-avenir"><%= "#{hir_type} - #{hir_cover}" %></span>
+                        </p>
+                    </div>
+                    <% if hir_cover == "familiar" %>
+                        <div class="column__padding--inline">
+                            <p class="size-14" style="font-family: avenir,sans-serif; font-size: 16px; line-height: 21px;" lang="x-size-14">
+                                Dependientes: <span class="font-avenir"><%= hir_dependents %></span>
+                            </p>
+                        </div>
+                    <% end %>
                 </div>
               <% end %>
 

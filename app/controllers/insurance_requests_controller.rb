@@ -14,16 +14,27 @@ class InsuranceRequestsController < ApplicationController
     if type.present?
       @insurance_type = type
       @name = params[:name]
+      @birthday = params[:birthday]
       @email = params[:email]
       @phone = params[:phone]
       @contact_via = params[:contact_via_check]
       @message = params[:message]
 
       if @insurance_type.include? "Auto"
-        @cir_brand = params["brand"]
-        @cir_model = params["model"]
-        @cir_year = params["year"]
-        @cir_price = params["price"]
+        @cir_document = params[:cir_document]
+        @cir_brand = params[:cir_brand]
+        @cir_model = params[:cir_model]
+        @cir_year = params[:cir_year]
+        @cir_price = params[:cir_price]
+      end
+
+      if @insurance_type.include? "Salud"
+        @hir_type = params[:hir_type_check]
+        @hir_cover = params[:hir_cover_check]
+
+        if @hir_cover == "familiar"
+          @hir_dependents = params[:hir_dependents]
+        end
       end
 
       send_client_email
@@ -33,15 +44,20 @@ class InsuranceRequestsController < ApplicationController
       if @client_response.code == 200 && @admin_response.code == 200
 
         InsuranceRequest.create(name: @name,
+                                birthday: @birthday,
                                 insurance_type: @insurance_type,
                                 message: @message,
                                 contact_via: @contact_via,
                                 email: @email.downcase,
                                 phone: @phone,
+                                cir_document: @cir_document,
                                 cir_brand: @cir_brand,
                                 cir_model: @cir_model,
                                 cir_year: @cir_year,
                                 cir_price: @cir_price,
+                                hir_type: @hir_type,
+                                hir_cover: @hir_cover,
+                                hir_dependents: @hir_dependents,
                                 token: SecureRandom.uuid,
                                 token_expired: false)
 
@@ -77,13 +93,18 @@ class InsuranceRequestsController < ApplicationController
       admin_data[:html] = (render_to_string partial: 'mails/request',
                                             locals: { insurance_type: @insurance_type,
                                                       name: @name,
+                                                      birthday: @birthday,
                                                       email: @email.downcase,
                                                       phone: @phone,
                                                       contact_via: @contact_via,
+                                                      cir_document: @cir_document,
                                                       cir_brand: @cir_brand,
                                                       cir_model: @cir_model,
                                                       cir_year: @cir_year,
                                                       cir_price: @cir_price,
+                                                      hir_type: @hir_type,
+                                                      hir_cover: @hir_cover,
+                                                      hir_dependents: @hir_dependents,
                                                       message: @message
                                                     },
                                             layout: false )

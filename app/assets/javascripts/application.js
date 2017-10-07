@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require bootstrap-datepicker
 //= require_tree .
 
 $(function () {
@@ -49,25 +50,48 @@ function validateTextArea(textArea){
 }
 
 function validateTextField(textField){
-    var valid = textField.checkValidity();
+  var valid = textField.checkValidity();
 
-    if (valid == false && textField.value != "") {
-      textField.style.borderColor = "red";
-    }
-    else if (textField.value == "") {
-      textField.style.borderColor = "";
-    }
-    else {
-      textField.style.borderColor = "#00e500"
-    }
+  if (valid == false && textField.value != "") {
+    textField.style.borderColor = "red";
+  }
+  else if (textField.value == "") {
+    textField.style.borderColor = "";
+  }
+  else {
+    textField.style.borderColor = "#00e500"
+  }
 }
 
 function contactViaCheck(contactVia) {
-    document.getElementById('contact_via_1_label').style.color = '#828282';
-    document.getElementById('contact_via_2_label').style.color = '#828282';
-    document.getElementById('contact_via_3_label').style.color = '#828282';
+  document.getElementById('contact_via_1_label').style.color = '#828282';
+  document.getElementById('contact_via_2_label').style.color = '#828282';
+  document.getElementById('contact_via_3_label').style.color = '#828282';
 
-    document.getElementById('contact_via_' + contactVia + '_label').style.color = '#F85A16';
+  document.getElementById('contact_via_' + contactVia + '_label').style.color = '#F85A16';
+}
+
+function hirTypeCheck(hirType) {
+  document.getElementById('hir_type_1_label').style.color = '#828282';
+  document.getElementById('hir_type_2_label').style.color = '#828282';
+
+  document.getElementById('hir_type_' + hirType + '_label').style.color = '#F85A16';
+}
+
+function hirCoverCheck(hirCover) {
+  document.getElementById('hir_cover_1_label').style.color = '#828282';
+  document.getElementById('hir_cover_2_label').style.color = '#828282';
+
+  document.getElementById('hir_cover_' + hirCover + '_label').style.color = '#F85A16';
+
+  if (document.getElementById('hir_cover_2').checked) {
+    document.getElementById('hir_dependents_text_area').style.display = 'block';
+    $('#hir_dependents').attr("required", true);
+  }
+  else {
+    document.getElementById('hir_dependents_text_area').style.display = 'none';
+    $('#hir_dependents').removeAttr("required");
+  }
 }
 
 function insuranceTypeCheck(type) {
@@ -76,8 +100,10 @@ function insuranceTypeCheck(type) {
   }
   else document.getElementById(type + '_check_label').style.color = '#828282';
 
+  // Mostrar u ocultar formulario extra para AUTOMOVIL
   if (document.getElementById('ci_check').checked) {
     document.getElementById('cir_data_form').style.display = 'block';
+    $('#cir_document').attr("required", true);
     $('#cir_brand').attr("required", true);
     $('#cir_model').attr("required", true);
     $('#cir_year').attr("required", true);
@@ -85,10 +111,27 @@ function insuranceTypeCheck(type) {
   }
   else {
     document.getElementById('cir_data_form').style.display = 'none';
+    $('#cir_document').removeAttr("required");
     $('#cir_brand').removeAttr("required");
     $('#cir_model').removeAttr("required");
     $('#cir_year').removeAttr("required");
     $('#cir_price').removeAttr("required");
+  }
+
+  // Mostrar u ocultar formulario extra para SALUD
+  if (document.getElementById('hi_check').checked) {
+    document.getElementById('hir_data_form').style.display = 'block';
+    $('#hir_type_1').attr("required", true);
+    $('#hir_type_2').attr("required", true);
+    $('#hir_cover_1').attr("required", true);
+    $('#hir_cover_2').attr("required", true);
+  }
+  else {
+    document.getElementById('hir_data_form').style.display = 'none';
+    $('#hir_type_1').removeAttr("required");
+    $('#hir_type_2').removeAttr("required");
+    $('#hir_cover_1').removeAttr("required");
+    $('#hir_cover_2').removeAttr("required");
   }
 }
 
