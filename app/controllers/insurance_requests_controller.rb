@@ -13,6 +13,7 @@ class InsuranceRequestsController < ApplicationController
 
     if type.present?
       @insurance_type = type
+      @document = params[:document]
       @name = params[:name]
       @birthday = params[:birthday]
       @email = params[:email]
@@ -21,7 +22,7 @@ class InsuranceRequestsController < ApplicationController
       @message = params[:message]
 
       if @insurance_type.include? "Auto"
-        @cir_document = params[:cir_document]
+
         @cir_brand = params[:cir_brand]
         @cir_model = params[:cir_model]
         @cir_year = params[:cir_year]
@@ -50,7 +51,7 @@ class InsuranceRequestsController < ApplicationController
                                 contact_via: @contact_via,
                                 email: @email.downcase,
                                 phone: @phone,
-                                cir_document: @cir_document,
+                                document: @document,
                                 cir_brand: @cir_brand,
                                 cir_model: @cir_model,
                                 cir_year: @cir_year,
@@ -97,7 +98,7 @@ class InsuranceRequestsController < ApplicationController
                                                       email: @email.downcase,
                                                       phone: @phone,
                                                       contact_via: @contact_via,
-                                                      cir_document: @cir_document,
+                                                      document: @document,
                                                       cir_brand: @cir_brand,
                                                       cir_model: @cir_model,
                                                       cir_year: @cir_year,
