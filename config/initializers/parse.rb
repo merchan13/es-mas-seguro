@@ -9,5 +9,3 @@ Parse.setup app_id: ENV['PARSE_APP_ID'],
         #    logging: false,
         #      cache: Moneta.new(:File, dir: 'tmp/cache'),
         #    expires: 1 # cache ttl 1 second
-
-Parse.auto_generate_models!
