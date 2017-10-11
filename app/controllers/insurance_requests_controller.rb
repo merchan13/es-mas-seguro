@@ -15,7 +15,7 @@ class InsuranceRequestsController < ApplicationController
       @insurance_type = type
       @document = params[:document]
       @name = params[:name]
-      @birthday = params[:birthday]
+      @age = params[:age]
       @email = params[:email]
       @phone = params[:phone]
       @contact_via = params[:contact_via_check]
@@ -45,7 +45,7 @@ class InsuranceRequestsController < ApplicationController
       if @client_response.code == 200 && @admin_response.code == 200
 
         InsuranceRequest.create(name: @name,
-                                birthday: @birthday,
+                                age: @age,
                                 insurance_type: @insurance_type,
                                 message: @message,
                                 contact_via: @contact_via,
@@ -94,7 +94,7 @@ class InsuranceRequestsController < ApplicationController
       admin_data[:html] = (render_to_string partial: 'mails/request',
                                             locals: { insurance_type: @insurance_type,
                                                       name: @name,
-                                                      birthday: @birthday,
+                                                      age: @age,
                                                       email: @email.downcase,
                                                       phone: @phone,
                                                       contact_via: @contact_via,

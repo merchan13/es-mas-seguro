@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171008225714) do
+ActiveRecord::Schema.define(version: 20171011155548) do
 
   create_table "complaints", force: :cascade do |t|
     t.string   "policy_number", null: false
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20171008225714) do
     t.string   "hir_type"
     t.string   "hir_cover"
     t.string   "hir_dependents"
-    t.string   "birthday"
+    t.string   "age"
     t.index ["rating_id"], name: "index_insurance_requests_on_rating_id"
   end
 

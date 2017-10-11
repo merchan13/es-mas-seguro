@@ -1,5 +1,5 @@
 
-class Parse::User < Parse::Object
+class SolicitudesAuto < Parse::Object
   # add additional properties
 
   # define a before save webhook for Parse::User

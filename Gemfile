@@ -46,6 +46,9 @@ gem 'bcrypt'
 gem 'devise'
 gem 'devise-i18n'
 
+# Parse Server
+gem 'parse-stack'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'

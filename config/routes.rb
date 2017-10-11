@@ -20,6 +20,6 @@ Rails.application.routes.draw do
   resource :insurance_requests
   resource :complaints
 
-  #get 'test',     to: 'pages#test'
+  get 'test',     to: 'pages#test'
   #resource :test
 end
